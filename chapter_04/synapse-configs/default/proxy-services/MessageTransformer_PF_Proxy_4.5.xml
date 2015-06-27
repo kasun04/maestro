@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="MessageTransformer_PF_Proxy_4.5"
+       transports="https http"
+       startOnLoad="true"
+       trace="disable">
+    <description/>
+    <target>
+        <inSequence>
+            <payloadFactory media-type="xml">
+                <format>
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://services.samples/xsd" xmlns:ser="http://services.samples">
+                        <soapenv:Body>
+                            <ser:getQuote>
+                                <ser:request>
+                                    <xsd:symbol>$1</xsd:symbol>
+                                </ser:request>
+                            </ser:getQuote>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                </format>
+                <args>
+                    <arg expression="//checkStockQuote/company" evaluator="xml"/>
+                </args>
+            </payloadFactory>
+            <call>
+                <endpoint>
+                    <address uri="http://127.0.0.1:9000/services/SimpleStockQuoteService"/>
+                </endpoint>
+            </call>
+            <respond/>
+        </inSequence>
+    </target>
+</proxy>

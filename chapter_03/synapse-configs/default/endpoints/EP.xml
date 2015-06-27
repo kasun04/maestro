@@ -1,0 +1,21 @@
+<endpoint name="Sample_First" statistics="enable" >
+        <address uri="http://localhost/myendpoint" statistics="enable" trace="disable">
+                <timeout>
+                        <duration>60000</duration>
+                </timeout>
+
+                <markForSuspension>
+                        <errorCodes>101504, 101505</errorCodes>
+                        <retriesBeforeSuspension>3</retriesBeforeSuspension>
+                        <retryDelay>1</retryDelay>
+                </markForSuspension>
+
+                <suspendOnFailure>
+                        <errorCodes>101500, 101501, 101506, 101507, 101508</errorCodes>
+                        <initialDuration>1000</initialDuration>
+                        <progressionFactor>2</progressionFactor>
+                        <maximumDuration>60000</maximumDuration>
+                </suspendOnFailure>
+
+        </address>
+</endpoint>

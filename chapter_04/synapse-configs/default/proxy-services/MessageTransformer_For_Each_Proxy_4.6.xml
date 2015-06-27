@@ -1,0 +1,37 @@
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="WeatherProxy"
+       transports="https http"
+       startOnLoad="true"
+       trace="disable">
+    <description/>
+    <target>
+        <inSequence>
+            <call>
+                <endpoint>
+                    <address uri="http://wsf.cdyne.com/WeatherWS/Weather.asmx"/>
+                </endpoint>
+            </call>
+            <log level="full"/>
+            <foreach xmlns:wh="http://ws.cdyne.com/WeatherWS/" expression="//wh:Forecast">
+                <sequence>
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <DailyForecast xmlns="http://ws.cdyne.com/WeatherWS/">
+                                <Date>$1</Date>
+                                <WeatherID>$2</WeatherID>
+                                <Desciption>$3</Desciption>
+                            </DailyForecast>
+                        </format>
+                        <args>
+                            <arg evaluator="xml" expression="//wh:Date"/>
+                            <arg evaluator="xml" expression="//wh:WeatherID"/>
+                            <arg evaluator="xml" expression="//wh:Desciption"/>
+                        </args>
+                    </payloadFactory>
+                </sequence>
+            </foreach>
+            <log level="full"/>
+            <respond/>
+        </inSequence>
+    </target>
+</proxy>

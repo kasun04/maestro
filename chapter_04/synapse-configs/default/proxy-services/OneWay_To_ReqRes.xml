@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="OneWay_To_ReqRes"
+       transports="https http"
+       startOnLoad="true"
+       trace="disable">
+    <description/>
+    <target>
+        <inSequence>
+            <property name="FORCE_SC_ACCEPTED" value="true" scope="axis2"/>
+            <call>
+                <endpoint>
+                    <address uri="http://127.0.0.1:9000/services/SimpleStockQuoteService"/>
+                </endpoint>
+            </call>
+            <log level="full"/>
+            <drop/>
+        </inSequence>
+    </target>
+</proxy>
+
+
+<!--<enrich>-->
+    <!--<source [type=custom|envelope|body|property|inline] xpath="" property="" />-->
+    <!--<target [type=custom|envelope|body|property|inline] xpath="" property="" />-->
+<!--</enrich>-->
+
