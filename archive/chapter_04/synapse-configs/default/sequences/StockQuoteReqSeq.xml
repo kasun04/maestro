@@ -1,0 +1,33 @@
+
+
+
+
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="StockQuoteReqSeq">
+    <payloadFactory media-type="xml">
+        <format>
+            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                              xmlns:ser="http://services.samples">
+                <soapenv:Header/>
+                <soapenv:Body>
+                    <ser:getSimpleQuote>
+                        <ser:symbol>$1</ser:symbol>
+                    </ser:getSimpleQuote>
+                </soapenv:Body>
+            </soapenv:Envelope>
+        </format>
+        <args>
+            <arg evaluator="json" expression="$.getFinancialQuote.company"/>
+        </args>
+    </payloadFactory>
+    <header name="Action" value="urn:getSimpleQuote"/>
+    <call>
+        <endpoint>
+            <address uri="http://localhost:9000/services/SimpleStockQuoteService"
+                     format="soap11"/>
+        </endpoint>
+    </call>
+    <property name="messageType"
+              value="application/json"
+              scope="axis2"
+              type="STRING"/>
+</sequence>

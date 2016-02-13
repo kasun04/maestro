@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="MessageEnrichProxy_4.9"
+       transports="https http"
+       startOnLoad="true"
+       trace="disable">
+    <description/>
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <enrich>
+                <source type="inline">
+                    <xsd:quantity xmlns:xsd="http://services.samples/xsd">19</xsd:quantity>
+                </source>
+                <target action="child" xmlns:ser="http://services.samples"
+                        xmlns:xsd="http://services.samples/xsd"
+                        xpath="//ser:placeOrder/ser:order"/>
+            </enrich>
+            <log level="full"/>
+            <call>
+                <endpoint>
+                    <address uri="http://127.0.0.1:9000/services/SimpleStockQuoteService"/>
+                </endpoint>
+            </call>
+            <respond/>
+        </inSequence>
+    </target>
+</proxy>
+
+
+
+        <!--<enrich>-->
+        <!--<source type="inline">10</source>-->
+        <!--<target xmlns:ser="http://services.samples"-->
+        <!--xmlns:xsd="http://services.samples/xsd"-->
+        <!--xpath="//ser:placeOrder/ser:order/xsd:quantity"/>-->
+        <!--</enrich>-->
+
+
+
+        <!--<payloadFactory>-->
+        <!--<format>-->
+        <!--<errorResponse>ERROR</errorResponse>-->
+        <!--</format>-->
+        <!--<args>-->
+        <!--</args>-->
+        <!--</payloadFactory>-->
