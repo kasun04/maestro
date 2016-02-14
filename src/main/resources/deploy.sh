@@ -1,9 +1,14 @@
 #!/bin/bash
 
+ if [ -z "$1" ] || [ -z "$2" ]; then
+     echo "Usage : ./deploy.sh ch_01 <ESB_HOME>"
+     exit 0
+ fi
+
+
 config="${1}/synapse-configs"
+esb_dep="${2}/repository/deployment/server"
 
-echo $1
+cp -r $config $esb_dep
 
-cp -r $config /Users/kasun/development/deployment/WEIA/wso2esb-4.9.0-M8-SNAPSHOT/repository/deployment/server
-
-echo "ESB config : $config copied."
+echo "ESB config : $config copied to : $esb_dep"
