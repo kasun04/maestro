@@ -1,0 +1,37 @@
+
+Pre-Req
+- Install JDK
+- Setup JAVA_HOME
+
+
+ESB_HOME
+========
+
+ESB_HOME is the location you extract the ESB distribution.
+e.g: For me ESB_HOME is /Users/kasun/development/deployment/maestro/wso2esb-4.9.0
+
+
+Start ESB
+=========
+
+> sh wso2server.sh
+
+Start Backend Services
+======================
+
+> java -var target/maestro-1.0-SNAPSHOT.jar
+
+
+Deploy
+======
+..maestro/src/main/resources$ >
+     sh deploy.sh ch_02 /Users/kasun/development/deployment/maestro/wso2esb-4.9.0
+
+
+Client
+======
+
+maestro/src/main/resources/ch_02$ >
+    curl -v -X POST -H 'Content-Type: application/json' -d @getQuoteMobileClientRequest.json http://localhost:8280/StockQuoteInfo
+
+

@@ -36,10 +36,10 @@
                     <arg evaluator="json" expression="$.getFinancialQuote.company"/>
                 </args>
             </payloadFactory>
-            <header name="Action" value="urn:getSimpleQuote"/>
+            <header name="Action" value="urn:getQuote"/>
             <call>
                 <endpoint>
-                    <address uri="http://localhost:9000/services/SimpleStockQuoteService"
+                    <address uri="http://localhost:6060/services/StockQuoteService"
                              format="soap11"/>
                 </endpoint>
             </call>

@@ -1,7 +1,0 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
-    <soapenv:Body>
-        <checkStockQuote>
-            <company>WSddO2</company>
-        </checkStockQuote>
-    </soapenv:Body>
-</soapenv:Envelope>

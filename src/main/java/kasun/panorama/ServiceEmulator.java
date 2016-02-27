@@ -31,7 +31,7 @@ import static org.wso2.gw.emulator.http.server.contexts.HttpServerResponseBuilde
 /**
  * Simple emulator server
  */
-public class BackEndServices {
+public class ServiceEmulator {
 
     public static void main(String args[]) {
         String payload = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
@@ -59,17 +59,19 @@ public class BackEndServices {
 
         Emulator.getHttpEmulator()
                 .server()
-                .given(configure().host("127.0.0.1").port(6060).context("/services/ch_01/StockQuoteService"))
+                .given(configure().host("127.0.0.1").port(6060).context("/services"))
                 .when(request()
+                              .withPath("StockQuoteService")
                               .withMethod(HttpMethod.POST)
-                              .withHeader("SOAPAction", "urn:getQuote"))
-                    .then(response()
-                              .withBody(payload).withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Header1", "value1"))
-                .when(request().withMethod(HttpMethod.GET).withPath("user2/"))
-                    .then(response().withStatusCode(HttpResponseStatus.NOT_FOUND)).operation().start();
+                              .withHeader("SOAPAction", "\"urn:getQuote\""))
+                .then(response()
+                              .withBody(payload)
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "text/xml"))
+                .operation().start();
 
 
+        System.out.println("StockQuoteService - SOAP service started on port : 6060");
 
     }
 }
