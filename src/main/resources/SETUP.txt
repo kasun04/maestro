@@ -1,37 +1,25 @@
 
-Pre-Req
+
+Prerequisites
+=============
+
 - Install JDK
 - Setup JAVA_HOME
 
 
-ESB_HOME
-========
+Installing and starting WSO2 ESB 5.0
+====================================
 
-ESB_HOME is the location you extract the ESB distribution.
-e.g: For me ESB_HOME is /Users/kasun/development/deployment/maestro/wso2esb-4.9.0
+- Download WSO2 ESB  : wso2esb-4.9.0.zip from http://wso2.com/products/enterprise-service-bus/
+- Unzip wso2esb-4.9.0.zip. (The path to this folder will be referred to as <ESB_HOME> throughout the documentation).
+- Start server by running the start script 'wso2server.sh' inside $ESB_HOME/bin : wso2esb-4.9.0/bin$ sh wso2server.sh
+- Once the server is successfully started, it should print the following log messages in the console.
 
-
-Start ESB
-=========
-
-> sh wso2server.sh
-
-Start Backend Services
-======================
-
-> java -var target/maestro-1.0-SNAPSHOT.jar
+    ...
+    [2016-02-27 23:26:59,038]  INFO - JMXServerManager JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi
+    [2016-02-27 23:26:59,039]  INFO - StartupFinalizerServiceComponent Server           :  WSO2 Enterprise Service Bus-4.9.0
+    [2016-02-27 23:26:59,040]  INFO - StartupFinalizerServiceComponent WSO2 Carbon started in 28 sec
+    [2016-02-27 23:26:59,226]  INFO - CarbonUIServiceComponent Mgt Console URL  : https://192.168.1.2:9443/carbon/
 
 
-Deploy
-======
-..maestro/src/main/resources$ >
-     sh deploy.sh ch_02 /Users/kasun/development/deployment/maestro/wso2esb-4.9.0
-
-
-Client
-======
-
-maestro/src/main/resources/ch_02$ >
-    curl -v -X POST -H 'Content-Type: application/json' -d @getQuoteMobileClientRequest.json http://localhost:8280/StockQuoteInfo
-
-
+- You have just installed and started WSO2 ESB successfully!

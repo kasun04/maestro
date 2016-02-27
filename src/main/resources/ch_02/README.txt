@@ -1,28 +1,6 @@
 
-
-Prerequisites
-=============
-
-- Install JDK
-- Setup JAVA_HOME
-
-
-Installing and starting WSO2 ESB 5.0
-====================================
-
-- Download WSO2 ESB  : wso2esb-4.9.0.zip from http://wso2.com/products/enterprise-service-bus/
-- Unzip wso2esb-4.9.0.zip. (The path to this folder will be referred to as <ESB_HOME> throughout the documentation).
-- Start server by running the start script 'wso2server.sh' inside $ESB_HOME/bin : wso2esb-4.9.0/bin$ sh wso2server.sh
-- Once the server is successfully started, it should print the following log messages in the console.
-
-    ...
-    [2016-02-27 23:26:59,038]  INFO - JMXServerManager JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi
-    [2016-02-27 23:26:59,039]  INFO - StartupFinalizerServiceComponent Server           :  WSO2 Enterprise Service Bus-4.9.0
-    [2016-02-27 23:26:59,040]  INFO - StartupFinalizerServiceComponent WSO2 Carbon started in 28 sec
-    [2016-02-27 23:26:59,226]  INFO - CarbonUIServiceComponent Mgt Console URL  : https://192.168.1.2:9443/carbon/
-
-
-- You have just installed and started WSO2 ESB successfully!
+Running Use Case 2.1
+====================
 
 
 Starting Backend Services
