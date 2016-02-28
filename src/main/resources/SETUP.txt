@@ -5,6 +5,7 @@ Prerequisites
 
 - Install JDK
 - Setup JAVA_HOME
+- Curl is required for trying out sample use cases. (https://curl.haxx.se/)
 
 
 Installing and starting WSO2 ESB 5.0
