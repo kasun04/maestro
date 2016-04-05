@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Body>
+        <getBankInfo>
+            <bankName>boa</bankName>
+            <applicationID>23DF9DS</applicationID>
+            <location>2.1, 3.4</location>
+        </getBankInfo>
+    </soapenv:Body>
+</soapenv:Envelope>

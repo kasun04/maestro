@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="BankInfoProxyService"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="FLW" value="=== Req Received ==="/>
+            </log>
+            <payloadFactory media-type="xml">
+                <format>
+                    <bankInfo xmlns="">
+                        <name>boa</name>
+                        <appId>23DF9DS</appId>
+                        <coordinates>2.1, 3.4</coordinates>
+                    </bankInfo>
+                </format>
+                <args/>
+            </payloadFactory>
+            <property name="messageType" value="application/xml" scope="axis2"/>
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:6060/services/BankInfoService" />
+                </endpoint>
+            </call>
+            <log level="full"/>
+            <property name="messageType" value="text/xml" scope="axis2"/>
+            <respond/>
+        </inSequence>
+    </target>
+    <publishWSDL key="BankInfoService.wsdl"/>
+    <description/>
+</proxy>
