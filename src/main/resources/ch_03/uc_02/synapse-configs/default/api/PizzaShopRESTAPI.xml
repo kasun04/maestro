@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="PizzaShopRESTAPI"
+     context="/pizzashop">
+   <resource methods="POST GET" url-mapping="/pizza">
+      <inSequence>
+         <log level="custom">
+            <property name="Messsage_Flow" value="==== PizzaMenu - Req Received ==="/>
+         </log>
+         <payloadFactory media-type="xml">
+            <format>
+               <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                  <soapenv:Body>
+                     <getPizzaMenu xmlns="">
+                        <category>meats</category>
+                     </getPizzaMenu>
+                  </soapenv:Body>
+               </soapenv:Envelope>
+            </format>
+            <args/>
+         </payloadFactory>
+         <property name="HTTP_METHOD" value="POST" scope="axis2" type="STRING"/>
+         <header name="Action" value="urn:getPizza"/>
+         <property name="messageType" value="text/xml" scope="axis2"/>
+         <call>
+            <endpoint>
+               <address uri="http://localhost:6060/services/PizzaShopService" format="soap11"/>
+            </endpoint>
+         </call>
+         <property name="messageType" value="application/json" scope="axis2"/>
+         <respond/>
+      </inSequence>
+   </resource>
+</api>

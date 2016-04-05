@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry xmlns="http://ws.apache.org/ns/synapse" key="BankInfoService.wsdl">
+    <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                      xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                      xmlns:tns="http://www.example.org/BankInfoProxyService/"
+                      name="BankInfoProxyService"
+                      targetNamespace="http://www.example.org/BankInfoProxyService/">
+        <wsdl:types>
+            <xsd:schema targetNamespace="http://www.example.org/BankInfoProxyService/">
+                <xsd:element name="getBankInformation">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="bankName" type="xsd:string"/>
+                            <xsd:element name="zipCode" type="xsd:string"/>
+                            <xsd:element name="applicationID" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="getBankInformationResponse">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="bank" type="xsd:string"/>
+                            <xsd:element name="address" type="xsd:string"/>
+                            <xsd:element name="phone" type="xsd:string"/>
+                            <xsd:element name="departments" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:schema>
+        </wsdl:types>
+        <wsdl:message name="getBankInformationRequest">
+            <wsdl:part element="tns:getBankInformation" name="parameters"/>
+        </wsdl:message>
+        <wsdl:message name="getBankInformationResponse">
+            <wsdl:part element="tns:getBankInformationResponse" name="parameters"/>
+        </wsdl:message>
+        <wsdl:portType name="BankInfoProxyService">
+            <wsdl:operation name="getBankInformation">
+                <wsdl:input message="tns:getBankInformationRequest"/>
+                <wsdl:output message="tns:getBankInformationResponse"/>
+            </wsdl:operation>
+        </wsdl:portType>
+        <wsdl:binding name="BankInfoProxyServiceSOAP" type="tns:BankInfoProxyService">
+            <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="getBankInformation">
+                <soap:operation soapAction="http://www.example.org/BankInfoProxyService/getBankInformation"/>
+                <wsdl:input>
+                    <soap:body use="literal"/>
+                </wsdl:input>
+                <wsdl:output>
+                    <soap:body use="literal"/>
+                </wsdl:output>
+            </wsdl:operation>
+        </wsdl:binding>
+        <wsdl:service name="BankInfoProxyService">
+            <wsdl:port binding="tns:BankInfoProxyServiceSOAP" name="BankInfoProxyServiceSOAP">
+                <soap:address location="http://localhost:8280/BankInfoProxyService"/>
+            </wsdl:port>
+        </wsdl:service>
+    </wsdl:definitions>
+    <description/>
+</localEntry>
