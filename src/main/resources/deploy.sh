@@ -5,10 +5,17 @@
      exit 0
  fi
 
+static_config="${1}/config"
+mediation_config="${1}/${2}/synapse-configs"
 
-config="${1}/${2}/synapse-configs"
+esb_static_config="${3}/repository/conf"
 esb_dep="${3}/repository/deployment/server"
 
-cp -r $config $esb_dep
+if [ -d "$static_config" ]; then
+  # static configuration found and using it for ESB
+  cp -r $static_config $esb_static_config
+  echo "ESB static config : $static_config copied to : $esb_static_config"
+fi
 
-echo "ESB config : $config copied to : $esb_dep"
+cp -r $mediation_config $esb_dep
+echo "ESB Mediation Config : $mediation_config copied to : $esb_dep"

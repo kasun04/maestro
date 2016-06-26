@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="OrderAcceptor"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="FLW" value="=== Req Received ==="/>
+            </log>
+            <property action="set" name="OUT_ONLY" value="true"/>
+            <call>
+                <endpoint>
+                    <address uri="jms:/StockQuotesQueue?transport.jms.ConnectionFactoryJNDIName=QueueConnectionFactory&amp;java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory&amp;java.naming.provider.url=repository/conf/jndi.properties&amp;transport.jms.DestinationType=queue" />
+                </endpoint>
+            </call>
+        </inSequence>
+    </target>
+    <description/>
+</proxy>

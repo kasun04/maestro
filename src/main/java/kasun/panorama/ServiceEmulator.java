@@ -149,7 +149,7 @@ public class ServiceEmulator {
 
         Emulator.getHttpEmulator()
                 .server()
-                .given(configure().host("127.0.0.1").port(7070).context("/services").withLogicDelay(15000))
+                .given(configure().host("127.0.0.1").port(7070).context("/services").withLogicDelay(11))
 
                 /* REST Service with delay : StockQuoteRESTService*/
                 .when(request()
@@ -160,5 +160,27 @@ public class ServiceEmulator {
                               .withStatusCode(HttpResponseStatus.OK)
                               .withHeader("Content-Type", "application/json "))
                 .operation().start();
+
+         timeoutVerifyBE();
+
+
     }
+
+
+    public static void timeoutVerifyBE() {
+        Emulator.getHttpEmulator()
+                .server()
+                .given(configure().host("127.0.0.1").port(9494).context("/TBE").withLogicDelay(50 * 1000))
+
+                /* SOAP Service : StockQuoteService*/
+                .when(request()
+                              .withPath("StockQuoteService")
+                              .withMethod(HttpMethod.POST))
+                .then(response()
+                              .withBody(soapStockQuoteResponse)
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "text/xml "))
+                .operation().start();
+    }
+
 }

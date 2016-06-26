@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="StockQuoteProvider"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+    <target>
+        <inSequence>
+            <log level="custom">
+                <property name="FLW" value="=== Req Received ==="/>
+            </log>
+            <header name="Action" value="urn:getQuote"/>
+
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:6060/services/StockQuoteService" />
+                </endpoint>
+            </call>
+            <log level="full"/>
+            <respond/>
+        </inSequence>
+    </target>
+    <description/>
+</proxy>
