@@ -19,9 +19,3 @@
     </target>
 </proxy>
 
-
-<!--<enrich>-->
-    <!--<source [type=custom|envelope|body|property|inline] xpath="" property="" />-->
-    <!--<target [type=custom|envelope|body|property|inline] xpath="" property="" />-->
-<!--</enrich>-->
-

@@ -1,0 +1,20 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ordproc="http://orders.samples">
+    <soapenv:Body>
+        <ordproc:procOrderReponse>
+            <processedOrders>
+                <order>
+                    <id>A234R</id>
+                </order>
+                <order>
+                    <id>B234D</id>
+                </order>
+                <order>
+                    <id>4RFG</id>
+                </order>
+                <order>
+                    <id>GR8Y</id>
+                </order>
+            </processedOrders>
+        </ordproc:procOrderReponse>
+    </soapenv:Body>
+</soapenv:Envelope>

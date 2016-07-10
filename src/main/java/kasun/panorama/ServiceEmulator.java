@@ -107,11 +107,28 @@ public class ServiceEmulator {
                                                        "  }\n" +
                                                        "}";
 
+    public static final String orderProcessingServicePayload = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ordproc=\"http://orders.samples\">\n" +
+                                                               "    <soapenv:Body>\n" +
+                                                               "        <ordproc:procOrderReponse>\n" +
+                                                               "            <processedOrders>\n" +
+                                                               "                <order>\n" +
+                                                               "                    <id>A234R</id>\n" +
+                                                               "                </order>\n" +
+                                                               "                <order>\n" +
+                                                               "                    <id>B234D</id>\n" +
+                                                               "                </order>\n" +
+                                                               "                <order>\n" +
+                                                               "                    <id>4RFG</id>\n" +
+                                                               "                </order>\n" +
+                                                               "                <order>\n" +
+                                                               "                    <id>GR8Y</id>\n" +
+                                                               "                </order>\n" +
+                                                               "            </processedOrders>\n" +
+                                                               "        </ordproc:procOrderReponse>\n" +
+                                                               "    </soapenv:Body>\n" +
+                                                               "</soapenv:Envelope>";
+
     public static void main(String args[]) {
-
-
-
-
         Emulator.getHttpEmulator()
                 .server()
                 .given(configure().host("127.0.0.1").port(6060).context("/services"))
@@ -139,12 +156,21 @@ public class ServiceEmulator {
                 /* SOAP Service : PizzaShopService */
                     .when(request()
                                   .withPath("PizzaShopService")
-                                  .withMethod(HttpMethod.POST)
-                                  /*.withHeader("SOAPAction", "urn:getPizza")*/)
+                                  .withMethod(HttpMethod.POST))
                     .then(response()
                                   .withBody(pizzaShopPayload)
                                   .withStatusCode(HttpResponseStatus.OK)
                                   .withHeader("Content-Type", "text/xml"))
+                /* SOAP Service : OrderProcessorService */
+                    .when(request()
+                                  .withPath("OrderProcessorService")
+                                  .withMethod(HttpMethod.POST))
+                    .then(response()
+                                  .withBody(orderProcessingServicePayload)
+                                  .withStatusCode(HttpResponseStatus.OK)
+                                  .withHeader("Content-Type", "text/xml"))
+
+
                 .operation().start();
 
         Emulator.getHttpEmulator()

@@ -1,0 +1,32 @@
+{ "orders": {
+    "order": [
+      {
+        "id": "A234R",
+        "name": "iPhone 6S",
+        "description": "Apple Inc. 2016, unlocked",
+        "unitPrice": "USD 700",
+        "quantity": "1"
+      },
+      {
+        "id": "B234D",
+        "name": "GoPro Hero4",
+        "description": "2016, black ",
+        "unitPrice": "USD 500",
+        "quantity": "1"
+      },
+      {
+        "id": "4RFG",
+        "name": "Nikon D5500",
+        "unitPrice": "USD 500",
+        "quantity": "1"
+      },
+      {
+        "id": "GR8Y",
+        "name": "iPhone case",
+        "description": "Waterproof iPhone 6s",
+        "unitPrice": "USD 15",
+        "quantity": "1"
+      }
+    ]
+  }
+}

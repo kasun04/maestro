@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse"
+                 name="OrderProcessing_File_Inbound_FTP"
+                 sequence="orderProcessingSeq"
+                 onError="fault"
+                 protocol="file"
+                 suspend="true">
+   <parameters>
+      <parameter name="interval">1000</parameter>
+      <parameter name="coordination">true</parameter>
+      <parameter name="transport.vfs.ContentType">text/xml</parameter>
+      <parameter name="transport.vfs.LockReleaseSameNode">false</parameter>
+      <parameter name="transport.vfs.AutoLockRelease">false</parameter>
+      <parameter name="transport.vfs.ActionAfterFailure">DELETE</parameter>
+      <parameter name="transport.vfs.CreateFolder">true</parameter>
+      <parameter name="sequential">true</parameter>
+      <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
+      <parameter name="transport.vfs.FileURI">/Users/kasun/development/deployment/maestro/wso2esb-4.9.0/sample_resources/file_reading/source</parameter>
+      <parameter name="transport.vfs.DistributedLock">false</parameter>
+      <parameter name="transport.vfs.Streaming">false</parameter>
+      <parameter name="transport.vfs.MoveAfterProcess">/Users/kasun/development/deployment/maestro/wso2esb-4.9.0/sample_resources/file_reading/destination</parameter>
+      <parameter name="transport.vfs.Locking">enable</parameter>
+      <parameter name="transport.vfs.FileSortAscending">true</parameter>
+      <parameter name="transport.vfs.FileSortAttribute">NONE</parameter>
+      <parameter name="transport.vfs.Build">false</parameter>
+   </parameters>
+</inboundEndpoint>

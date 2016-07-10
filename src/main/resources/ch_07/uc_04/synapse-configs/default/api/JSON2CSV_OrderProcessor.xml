@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="JSON2CSV_OrderProcessor"
+     context="/mobile_order_processor">
+   <resource methods="POST" url-mapping="/orders">
+      <inSequence>
+         <log level="custom">
+            <property name="Message Flow" value="== Order Received =="/>
+         </log>
+         <property name="OUT_ONLY" value="true" scope="default" type="STRING"/>
+         <property name="transport.vfs.ReplyFileName"
+                   expression="fn:concat(fn:substring-after(get-property('MessageID'), 'urn:uuid:'), '.xml')"
+                   scope="transport"/>
+         <call>
+            <endpoint>
+               <address uri="vfs:file:///Users/kasun/development/deployment/maestro/wso2esb-4.9.0/sample_resources/file_writing"/>
+            </endpoint>
+         </call>
+      </inSequence>
+   </resource>
+</api>

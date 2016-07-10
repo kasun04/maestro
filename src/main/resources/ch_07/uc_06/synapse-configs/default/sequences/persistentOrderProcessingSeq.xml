@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="orderProcessingSeq">
+   <log level="full">
+      <property name="MSG" value="== Received =="/>
+   </log>
+   <property name="OUT_ONLY" value="true"/>
+   <property name="FORCE_SC_ACCEPTED" value="true" scope="axis2"/>
+
+   <call>
+      <endpoint>
+         <address uri="jms:/PersistentOrderQueue?transport.jms.ConnectionFactoryJNDIName=QueueConnectionFactory&amp;java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory&amp;java.naming.provider.url=repository/conf/jndi.properties&amp;transport.jms.DestinationType=queue"/>
+      </endpoint>
+   </call>
+</sequence>
