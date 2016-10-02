@@ -41,8 +41,6 @@ public class ServiceEmulator {
     public static final int PORT_SERVICE_ORCHESTRATION = 9191;
     public static final String URI_SERVICE_ORCHESTRATION = "/serviceorchestration";
 
-
-
     public static final String soapStockQuoteResponse = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
                                                         "   <soapenv:Body>\n" +
                                                         "      <ns:getQuoteResponse xmlns:ns=\"http://services.samples\">\n" +
@@ -139,10 +137,7 @@ public class ServiceEmulator {
                                                                "</soapenv:Envelope>";
 
     public static void main(String args[]) {
-
-
-
-        runServiceOrchetrationbackends();
+        runServices();
     }
 
 
@@ -204,11 +199,7 @@ public class ServiceEmulator {
                               .withStatusCode(HttpResponseStatus.OK)
                               .withHeader("Content-Type", "application/json "))
                 .operation().start();
-    }
 
-
-    public static void runServiceOrchetrationbackends() {
-        System.out.println("Path : " +System.getProperty("user.dir"));
 
         Emulator.getHttpEmulator()
                 .server()
@@ -245,6 +236,13 @@ public class ServiceEmulator {
                               .withHeader("Content-Type", "application/xml"))
 
                 .operation().start();
+
+    }
+
+
+    public static void runServiceOrchetrationbackends() {
+
+
 
 
 

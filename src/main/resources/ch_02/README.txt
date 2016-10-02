@@ -6,14 +6,20 @@ Running Use Case 2.1
 Starting Backend Services
 =========================
 
-- Download maestro-1.0-SNAPSHOT.jar from :
+- Download maestro-1.0-SNAPSHOT.jar from : https://github.com/kasun04/maestro/raw/master/maestro-1.0.0.jar
 - Run java -jar maestro-1.0-SNAPSHOT.jar to start the backend services.
 - Observe the following logs in a successfully started services.
 
-     StockQuoteService - SOAP service started on port : 6060
-     INFO [io.netty.handler.logging.LoggingHandler] [id: 0xd608d362] REGISTERED
-     INFO [io.netty.handler.logging.LoggingHandler] [id: 0xd608d362] BIND(/127.0.0.1:6060)
-     INFO [io.netty.handler.logging.LoggingHandler] [id: 0xd608d362, /127.0.0.1:6060] ACTIVE
+        kasun@macbookpro:~/development/source/git/kasun04/maestro$ java -jar maestro-1.0.0.jar
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0x735f8565] REGISTERED
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0xe5ec0c96] REGISTERED
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0xa93c3cd2] REGISTERED
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0xe5ec0c96] BIND(/127.0.0.1:6060)
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0xa93c3cd2] BIND(/127.0.0.1:7070)
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0x735f8565] BIND(/127.0.0.1:9191)
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0xe5ec0c96, /127.0.0.1:6060] ACTIVE
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0xa93c3cd2, /127.0.0.1:7070] ACTIVE
+         INFO [io.netty.handler.logging.LoggingHandler] [id: 0x735f8565, /127.0.0.1:9191] ACTIVE
 
 
 Deploying sample configuration
