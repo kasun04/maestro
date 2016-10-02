@@ -17,7 +17,7 @@
       <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
       <parameter name="transport.vfs.FileURI">/Users/kasun/development/deployment/maestro/wso2esb-5.0.0-BETA/sample_resources/file_reading/streaming</parameter>
       <parameter name="transport.vfs.DistributedLock">false</parameter>
-      <parameter name="transport.vfs.Streaming">false</parameter>
+      <parameter name="transport.vfs.Streaming">true</parameter>
       <parameter name="transport.vfs.Locking">enable</parameter>
       <parameter name="transport.vfs.FileSortAscending">true</parameter>
       <parameter name="transport.vfs.FileSortAttribute">NONE</parameter>

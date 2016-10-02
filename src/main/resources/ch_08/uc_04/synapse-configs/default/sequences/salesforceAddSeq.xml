@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="salesforceAddSeq">
+
+   <log level="custom">
+      <property name="Message Flow" value="Calling Salesforce upsert"/>
+   </log>
+
+   <payloadFactory>
+      <format>
+         <sfdc:sObjects xmlns:sfdc="sfdc" type="Account">
+            <sfdc:sObject>
+               <sfdc:Id>0019000000aaMkZ</sfdc:Id>
+               <sfdc:Name>newname001</sfdc:Name>
+            </sfdc:sObject>
+            <sfdc:sObject>
+               <sfdc:Name>newname002</sfdc:Name>
+            </sfdc:sObject>
+         </sfdc:sObjects>
+      </format>
+      <args/>
+   </payloadFactory>
+
+   <salesforce.upsert>
+      <allOrNone>0</allOrNone>
+      <allowFieldTruncate>0</allowFieldTruncate>
+      <externalId>Id</externalId>
+      <sobjects xmlns:sfdc="sfdc">{//sfdc:sObjects}</sobjects>
+   </salesforce.upsert>
+
+   <!-- mediation logic : data mapping, filtering, spliting etc.  -->
+</sequence>

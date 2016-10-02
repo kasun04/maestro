@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Body>
+        <ser:getATMLocation xmlns:ser="http://sample.bank.com">
+            <ser:postalCode>95134</ser:postalCode>
+            <ser:bank>ABC Bank</ser:bank>
+        </ser:getATMLocation>
+    </soapenv:Body>
+</soapenv:Envelope>

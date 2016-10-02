@@ -15,10 +15,9 @@
       <parameter name="transport.vfs.CreateFolder">true</parameter>
       <parameter name="sequential">true</parameter>
       <parameter name="transport.vfs.ActionAfterProcess">MOVE</parameter>
-      <parameter name="transport.vfs.FileURI">/Users/kasun/development/deployment/maestro/wso2esb-4.9.0/sample_resources/file_reading/source</parameter>
+      <parameter name="transport.vfs.FileURI">vfs:ftps://kasun:password@ftp.server.org/test?vfs.passive=true</parameter>
       <parameter name="transport.vfs.DistributedLock">false</parameter>
       <parameter name="transport.vfs.Streaming">false</parameter>
-      <parameter name="transport.vfs.MoveAfterProcess">/Users/kasun/development/deployment/maestro/wso2esb-4.9.0/sample_resources/file_reading/destination</parameter>
       <parameter name="transport.vfs.Locking">enable</parameter>
       <parameter name="transport.vfs.FileSortAscending">true</parameter>
       <parameter name="transport.vfs.FileSortAttribute">NONE</parameter>

@@ -1,0 +1,9 @@
+<inboundEndpoint name="WeatherInfo_WebSockBroadcaster" onError="fault" protocol="ws"
+                 sequence="weatherDataReq_Seq" suspend="false">
+   <parameters>
+      <parameter name="inbound.ws.port">9092</parameter>
+      <parameter name="ws.outflow.dispatch.sequence">weatherDataServerPush_Seq</parameter>
+      <parameter name="ws.client.side.broadcast.level">2</parameter>
+      <parameter name="ws.outflow.dispatch.fault.sequence">fault</parameter>
+   </parameters>
+</inboundEndpoint>

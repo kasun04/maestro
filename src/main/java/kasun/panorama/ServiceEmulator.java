@@ -24,6 +24,11 @@ import io.netty.handler.codec.http.HttpMethod;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import org.wso2.gw.emulator.dsl.Emulator;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
 import static org.wso2.gw.emulator.http.server.contexts.HttpServerConfigBuilderContext.configure;
 import static org.wso2.gw.emulator.http.server.contexts.HttpServerRequestBuilderContext.request;
 import static org.wso2.gw.emulator.http.server.contexts.HttpServerResponseBuilderContext.response;
@@ -32,6 +37,11 @@ import static org.wso2.gw.emulator.http.server.contexts.HttpServerResponseBuilde
  * Simple emulator server
  */
 public class ServiceEmulator {
+
+    public static final int PORT_SERVICE_ORCHESTRATION = 9191;
+    public static final String URI_SERVICE_ORCHESTRATION = "/serviceorchestration";
+
+
 
     public static final String soapStockQuoteResponse = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
                                                         "   <soapenv:Body>\n" +
@@ -129,46 +139,54 @@ public class ServiceEmulator {
                                                                "</soapenv:Envelope>";
 
     public static void main(String args[]) {
+
+
+
+        runServiceOrchetrationbackends();
+    }
+
+
+    public static void runServices() {
         Emulator.getHttpEmulator()
                 .server()
                 .given(configure().host("127.0.0.1").port(6060).context("/services"))
 
                 /* SOAP Service : StockQuoteService*/
-                    .when(request()
-                                  .withPath("StockQuoteService")
-                                  .withMethod(HttpMethod.POST)
-                                  .withHeader("SOAPAction", "\"urn:getQuote\""))
-                        .then(response()
-                                      .withBody(soapStockQuoteResponse)
-                                      .withStatusCode(HttpResponseStatus.OK)
-                                      .withHeader("Content-Type", "text/xml "))
+                .when(request()
+                              .withPath("StockQuoteService")
+                              .withMethod(HttpMethod.POST)
+                              .withHeader("SOAPAction", "\"urn:getQuote\""))
+                .then(response()
+                              .withBody(soapStockQuoteResponse)
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "text/xml "))
 
                 /* Legacy PoX Service : BankInfoService */
-                    .when(request()
-                                  .withPath("BankInfoService")
-                                  .withMethod(HttpMethod.POST)
-                                  .withHeader("Content-Type", "application/xml; charset=UTF-8"))
-                    .then(response()
-                                  .withBody(poxPayload)
-                                  .withStatusCode(HttpResponseStatus.OK)
-                                  .withHeader("Content-Type", "application/xml"))
+                .when(request()
+                              .withPath("BankInfoService")
+                              .withMethod(HttpMethod.POST)
+                              .withHeader("Content-Type", "application/xml; charset=UTF-8"))
+                .then(response()
+                              .withBody(poxPayload)
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "application/xml"))
 
                 /* SOAP Service : PizzaShopService */
-                    .when(request()
-                                  .withPath("PizzaShopService")
-                                  .withMethod(HttpMethod.POST))
-                    .then(response()
-                                  .withBody(pizzaShopPayload)
-                                  .withStatusCode(HttpResponseStatus.OK)
-                                  .withHeader("Content-Type", "text/xml"))
+                .when(request()
+                              .withPath("PizzaShopService")
+                              .withMethod(HttpMethod.POST))
+                .then(response()
+                              .withBody(pizzaShopPayload)
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "text/xml"))
                 /* SOAP Service : OrderProcessorService */
-                    .when(request()
-                                  .withPath("OrderProcessorService")
-                                  .withMethod(HttpMethod.POST))
-                    .then(response()
-                                  .withBody(orderProcessingServicePayload)
-                                  .withStatusCode(HttpResponseStatus.OK)
-                                  .withHeader("Content-Type", "text/xml"))
+                .when(request()
+                              .withPath("OrderProcessorService")
+                              .withMethod(HttpMethod.POST))
+                .then(response()
+                              .withBody(orderProcessingServicePayload)
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "text/xml"))
 
 
                 .operation().start();
@@ -186,27 +204,105 @@ public class ServiceEmulator {
                               .withStatusCode(HttpResponseStatus.OK)
                               .withHeader("Content-Type", "application/json "))
                 .operation().start();
+    }
 
-         timeoutVerifyBE();
+
+    public static void runServiceOrchetrationbackends() {
+
+        Emulator.getHttpEmulator()
+                .server()
+                .given(configure().host("127.0.0.1").port(PORT_SERVICE_ORCHESTRATION).context(URI_SERVICE_ORCHESTRATION))
+
+                /* GeoLocationToPostalCodeService */
+                .when(request()
+                              .withPath("GeoLocationToPostalCodeService")
+                              .withMethod(HttpMethod.POST)
+                              .withHeader("Content-Type", "application/json"))
+                .then(response()
+                              .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/GeoLocationToPostalCode_res.json"))
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "application/json"))
+
+                /* PostalcodeToATMLocatorService */
+                .when(request()
+                              .withPath("PostalcodeToATMLocatorService")
+                              .withMethod(HttpMethod.POST)
+                              /*.withHeader("SOAPAction", "urn:PostalcodeToATMLocatorService")*/)
+                .then(response()
+                              .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/PostalcodeToATMLocatorService_res.xml"))
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "text/xml"))
+
+                /* GeoLocationToAddressService */
+                .when(request()
+                              .withPath("GeoLocationToAddressService")
+                              .withMethod(HttpMethod.POST)
+                              .withHeader("Content-Type", "application/xml"))
+                .then(response()
+                              .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/GeoLocationToAddress_res.xml"))
+                              .withStatusCode(HttpResponseStatus.OK)
+                              .withHeader("Content-Type", "application/xml"))
+
+                .operation().start();
 
 
+
+    }
+
+
+    public static String createPayload(String fileName) {
+
+        StringBuilder builder = new StringBuilder();
+        BufferedReader br = null;
+
+        try {
+            String sCurrentLine = "";
+            br = new BufferedReader(new FileReader(fileName));
+            while ((sCurrentLine = br.readLine()) != null) {
+                builder.append(sCurrentLine + "\n");
+             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null)br.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return   builder.toString();
     }
 
 
     public static void timeoutVerifyBE() {
         Emulator.getHttpEmulator()
                 .server()
-                .given(configure().host("127.0.0.1").port(9494).context("/TBE").withLogicDelay(50 * 1000))
+                .given(configure().host("127.0.0.1").port(9797).context("/Foo").withLogicDelay(1* 1000))
 
-                /* SOAP Service : StockQuoteService*/
                 .when(request()
-                              .withPath("StockQuoteService")
+                              .withPath("EchoService")
                               .withMethod(HttpMethod.POST))
                 .then(response()
                               .withBody(soapStockQuoteResponse)
                               .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "text/xml "))
+                              .withHeader("Content-Type", "text/xml"))
                 .operation().start();
+
+
+        /*Emulator.getHttpEmulator()
+                .server()
+                .given(configure().host("127.0.0.1").port(9494).context("/TBE").withLogicDelay(1* 1000))
+
+                *//* SOAP Service : StockQuoteService*//*
+                .when(request()
+                              .withPath("StockQuoteService")
+                              .withMethod(HttpMethod.POST))
+                .then(response()
+                              .withStatusCode(HttpResponseStatus.ACCEPTED)
+                              .withHeader("Content-Type", "text/xml "))
+                .operation().start();*/
+
     }
+
 
 }

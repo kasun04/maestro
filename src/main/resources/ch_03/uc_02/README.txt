@@ -10,7 +10,7 @@ Starting Backend Services
 
 Checking the backend
 
-curl -v -X POST -H 'Content-Type: text/xml' -H 'SOAPAction: "urn:getPizza"' -d @be_req.xml http://localhost:6060/services/PizzaShopService
+
 
 
 

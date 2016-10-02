@@ -1,0 +1,16 @@
+<bapirfc name="{rfcFunctionName}">
+    <import name="{jcoStructureName}">
+        <structure>
+            <field name="{fieldName}">{fieldValue_to_set_to_structure_field}</field>
+        </structure>
+        <field name="{fieldName}">{fieldValue}</field>
+    </import>
+    <tables>
+        <table name="{tablename}">
+            <row id="{rowId}"> <!-- collection of rows -->
+                <field name="{fieldName}">{fieldValue}</field>
+            </row>
+        </table>
+    </tables>
+</bapirfc>
+

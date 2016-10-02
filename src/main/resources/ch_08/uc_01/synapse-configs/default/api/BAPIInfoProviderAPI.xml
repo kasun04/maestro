@@ -1,0 +1,22 @@
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="BAPIInfoProviderAPI"
+     context="/bapiinfo">
+    <resource methods="POST">
+        <inSequence>
+
+
+            <!-- ... data mapping ... -->
+
+            <call>
+                <endpoint>
+                    <address uri="bapi:/SAP_02"/>
+                </endpoint>
+            </call>
+            <property name="messageType"
+                      value="application/json"
+                      scope="axis2"
+                      type="STRING"/>
+            <respond/>
+        </inSequence>
+    </resource>
+</api>

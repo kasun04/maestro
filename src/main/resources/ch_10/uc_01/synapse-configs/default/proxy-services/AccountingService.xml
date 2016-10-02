@@ -1,0 +1,21 @@
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="AccountingService"
+       transports="http"
+       startOnLoad="true"
+       trace="enable"
+       statistics="enable">
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <!-- ... data mapper ... -->
+            <call>
+                <endpoint name="sapidocendpoint">
+                    <address uri="idoc:/SAP_02"/>
+                </endpoint>
+            </call>
+        </inSequence>
+        <outSequence/>
+    </target>
+    <parameter name="serviceType">proxy</parameter>
+    <description/>
+</proxy>

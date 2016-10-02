@@ -1,0 +1,23 @@
+<BAPI_USER_GETLIST>
+    <INPUT>
+        <MAX_ROWS>0</MAX_ROWS>
+        <WITH_USERNAME/>
+    </INPUT>
+    <OUTPUT>
+        <ROWS>8</ROWS>
+    </OUTPUT>
+    <TABLES>
+        <RETURN/>
+        <SELECTION_EXP/>
+        <SELECTION_RANGE/>
+        <USERLIST>
+            <item>
+                <USERNAME>WSO2_User</USERNAME>
+                <FIRSTNAME/>
+                <LASTNAME/>
+                <FULLNAME/>
+            </item>
+        </USERLIST>
+    </TABLES>
+</BAPI_USER_GETLIST>
+

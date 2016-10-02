@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.samples">
+    <soapenv:Body>
+        <ser:order>
+            <ser:orderId>12345</ser:orderId>
+            <ser:rderName>my_order</ser:rderName>
+            <ser:itemId>BQ324</ser:itemId>
+            <ser:quantity>4</ser:quantity>
+        </ser:order>
+    </soapenv:Body>
+</soapenv:Envelope>

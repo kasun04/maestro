@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="OrderManager_WebSockListener_ServerPush_Seq">
+
+   <log level="custom">
+      <property name="Message Flow" value="ServerPush message received"/>
+   </log>
+   <!-- ... Data Mapper ...-->
+   <respond/>
+</sequence>

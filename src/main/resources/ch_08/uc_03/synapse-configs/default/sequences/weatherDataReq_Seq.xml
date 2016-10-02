@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="weatherDataReq_Seq">
+
+   <log level="custom">
+      <property name="Message Flow" value="WS-Request message"/>
+   </log>
+
+   <property name="OUT_ONLY" value="true"/>
+   <call>
+      <endpoint>
+         <address uri="ws://localhost:8082/wsoc/OrderMgtService"/>
+      </endpoint>
+   </call>
+</sequence>

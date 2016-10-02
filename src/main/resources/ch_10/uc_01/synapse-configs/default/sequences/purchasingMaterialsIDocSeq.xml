@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="purchasingMaterialsIDocSeq">
+   <log level="full">
+      <property name="MSG" value="== Received =="/>
+   </log>
+   <!-- ... Data Mapper ...-->
+   <!-- Send to soap service -->
+
+</sequence>
