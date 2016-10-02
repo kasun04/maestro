@@ -4,23 +4,23 @@ Prerequisites
 =============
 
 - Install JDK
-- Setup JAVA_HOME
+- Setup JAVA_HOME (https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/)
 - Curl is required for trying out sample use cases. (https://curl.haxx.se/)
 
 
 Installing and starting WSO2 ESB 5.0
 ====================================
 
-- Download WSO2 ESB  : wso2esb-4.9.0.zip from http://wso2.com/products/enterprise-service-bus/
-- Unzip wso2esb-4.9.0.zip. (The path to this folder will be referred to as <ESB_HOME> throughout the documentation).
-- Start server by running the start script 'wso2server.sh' inside $ESB_HOME/bin : wso2esb-4.9.0/bin$ sh wso2server.sh
+- Download WSO2 ESB from http://wso2.com/products/enterprise-service-bus/
+- Unzip WSO2 ESB distribution. (The path to this folder will be referred to as <ESB_HOME> throughout the documentation).
+- Start server by running the start script 'wso2server.sh' inside $ESB_HOME/bin : wso2esb-5.0.0/bin$ sh wso2server.sh
 - Once the server is successfully started, it should print the following log messages in the console.
 
     ...
     [2016-02-27 23:26:59,038]  INFO - JMXServerManager JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi
-    [2016-02-27 23:26:59,039]  INFO - StartupFinalizerServiceComponent Server           :  WSO2 Enterprise Service Bus-4.9.0
+    [2016-02-27 23:26:59,039]  INFO - StartupFinalizerServiceComponent Server           :  WSO2 Enterprise Service Bus-5.0.0
     [2016-02-27 23:26:59,040]  INFO - StartupFinalizerServiceComponent WSO2 Carbon started in 28 sec
-    [2016-02-27 23:26:59,226]  INFO - CarbonUIServiceComponent Mgt Console URL  : https://192.168.1.2:9443/carbon/
+    [2016-02-27 23:26:59,226]  INFO - CarbonUIServiceComponent Mgt Console URL  : https://127.0.0.1:9443/carbon/
 
 
 - You have just installed and started WSO2 ESB successfully!

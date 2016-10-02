@@ -1,0 +1,34 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+
+
+
+
+
+
+
+
+
+outputroot = [];
+
+for(i_order in inputroot.orders.order){
+
+outputroot[i_order] = {};
+
+
+
+
+outputroot[i_order].quantity = inputroot.orders.order[i_order].quantity;
+outputroot[i_order].unitPrice = inputroot.orders.order[i_order].unitPrice;
+outputroot[i_order].name = inputroot.orders.order[i_order].name;
+outputroot[i_order].id = inputroot.orders.order[i_order].id;
+outputroot[i_order].description = inputroot.orders.order[i_order].name.concat(':',inputroot.orders.order[i_order].description);
+
+}
+return outputroot;
+};
+
+
+
+

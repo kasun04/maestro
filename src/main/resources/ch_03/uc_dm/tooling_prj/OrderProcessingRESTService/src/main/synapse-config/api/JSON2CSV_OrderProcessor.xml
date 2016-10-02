@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/orderproc" name="JSON2CSV_OrderProcessor" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <property name="FORCE_SC_ACCEPTED" scope="axis2" type="STRING" value="true"/>
+            <datamapper config="gov:datamapper/orderProcMappingConfig.dmc" inputSchema="gov:datamapper/orderProcMappingConfig_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/orderProcMappingConfig_outputSchema.json" outputType="CSV"/>
+            <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+            <property expression="fn:concat(fn:substring-after(get-property('MessageID'), 'urn:uuid:'), '.csv')" name="transport.vfs.ReplyFileName" scope="transport" type="STRING"/>
+            <call>
+                <endpoint>
+                    <address uri="vfs:file:///Users/kasun/development/deployment/maestro/wso2esb-4.9.0/sample_resources/file_writing"/>
+                </endpoint>
+            </call>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,30 @@
+<orders>
+    <order>
+        <id>A234R</id>
+        <name>iPhone 6S</name>
+        <description>Apple Inc. 2016, unlocked</description>
+        <unitPrice>USD 700</unitPrice>
+        <quantity>1</quantity>
+    </order>
+    <order>
+        <id>B234D</id>
+        <name>GoPro Hero4</name>
+        <description>2016, black </description>
+        <unitPrice>USD 500</unitPrice>
+        <quantity>1</quantity>
+    </order>
+    <order>
+        <id>4RFG</id>
+        <name>Nikon D5500</name>
+        <description></description>
+        <unitPrice>USD 500</unitPrice>
+        <quantity>1</quantity>
+    </order>
+    <order>
+        <id>GR8Y</id>
+        <name>iPhone case</name>
+        <description>Waterproof iPhone 6s</description>
+        <unitPrice>USD 15</unitPrice>
+        <quantity>1</quantity>
+    </order>
+</orders>

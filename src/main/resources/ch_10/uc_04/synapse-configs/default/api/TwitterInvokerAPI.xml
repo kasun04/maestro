@@ -1,0 +1,62 @@
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="TwitterInvokerAPI"
+     context="/twitterinvoker">
+    <resource methods="POST">
+        <inSequence>
+            <!-- Variable extraction -->
+            <log level="full"/>
+            <twitter.init>
+                <consumerKey>{$ctx:consumerKey}</consumerKey>
+                <consumerSecret>{$ctx:consumerSecret}</consumerSecret>
+                <accessToken>{$ctx:accessToken}</accessToken>
+                <accessTokenSecret>{$ctx:accessTokenSecret}</accessTokenSecret>
+            </twitter.init>
+
+            <twitter.updateStatus>
+                <status>{$ctx:status}</status>
+                <inReplyToStatusId>{$ctx:inReplyToStatusId}</inReplyToStatusId>
+                <possiblySensitive>{$ctx:possiblySensitive}</possiblySensitive>
+                <latitude>{$ctx:latitude}</latitude>
+                <longitude>{$ctx:longitude}</longitude>
+                <placeId>{$ctx:placeId}</placeId>
+                <displayCoordinates>{$ctx:displayCoordinates}</displayCoordinates>
+                <trimUser>{$ctx:trimUser}</trimUser>
+                <mediaIds>{$ctx:mediaIds}</mediaIds>
+            </twitter.updateStatus>
+
+
+            <twitter.updateStatus configKey="otherTwitterAcc">
+                <status>{$ctx:status}</status>
+                <inReplyToStatusId>{$ctx:inReplyToStatusId}</inReplyToStatusId>
+                <possiblySensitive>{$ctx:possiblySensitive}</possiblySensitive>
+                <latitude>{$ctx:latitude}</latitude>
+                <longitude>{$ctx:longitude}</longitude>
+                <placeId>{$ctx:placeId}</placeId>
+                <displayCoordinates>{$ctx:displayCoordinates}</displayCoordinates>
+                <trimUser>{$ctx:trimUser}</trimUser>
+                <mediaIds>{$ctx:mediaIds}</mediaIds>
+            </twitter.updateStatus>
+
+
+            <twitter.init>
+                <consumerKey>{$ctx:consumerKey}</consumerKey>
+                <consumerSecret>{wso2:vault-lookup('kasun.consumer.secret')}</consumerSecret>
+                <accessToken>{$ctx:accessToken}</accessToken>
+                <accessTokenSecret>{$ctx:accessTokenSecret}</accessTokenSecret>
+            </twitter.init>
+
+            <twitter.updateStatus>
+                <status>{$ctx:status}</status>
+                <inReplyToStatusId>{$ctx:inReplyToStatusId}</inReplyToStatusId>
+                <possiblySensitive>{$ctx:possiblySensitive}</possiblySensitive>
+                <latitude>{$ctx:latitude}</latitude>
+                <longitude>{$ctx:longitude}</longitude>
+                <placeId>{$ctx:placeId}</placeId>
+                <displayCoordinates>{$ctx:displayCoordinates}</displayCoordinates>
+                <trimUser>{$ctx:trimUser}</trimUser>
+                <mediaIds>{$ctx:mediaIds}</mediaIds>
+            </twitter.updateStatus>
+
+        </inSequence>
+    </resource>
+</api>

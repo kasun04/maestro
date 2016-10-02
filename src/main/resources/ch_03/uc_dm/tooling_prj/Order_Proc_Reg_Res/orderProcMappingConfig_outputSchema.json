@@ -1,0 +1,38 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "nullable" : "false",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "array",
+  "items" : [ {
+    "properties" : {
+      "id" : {
+        "id" : "http://wso2jsonschema.org/0/id",
+        "type" : "string",
+        "nullable" : "false"
+      },
+      "name" : {
+        "id" : "http://wso2jsonschema.org/0/name",
+        "type" : "string",
+        "nullable" : "false"
+      },
+      "description" : {
+        "id" : "http://wso2jsonschema.org/0/description",
+        "type" : "string",
+        "nullable" : "false"
+      },
+      "unitPrice" : {
+        "id" : "http://wso2jsonschema.org/0/unitPrice",
+        "type" : "string",
+        "nullable" : "false"
+      },
+      "quantity" : {
+        "id" : "http://wso2jsonschema.org/0/quantity",
+        "type" : "string",
+        "nullable" : "false"
+      }
+    },
+    "id" : "http://wso2jsonschema.org/0",
+    "type" : "object"
+  } ]
+}

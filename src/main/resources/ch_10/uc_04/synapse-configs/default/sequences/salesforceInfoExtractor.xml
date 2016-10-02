@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="salesforceInfoExtractor">
+
+   <log level="custom">
+      <property name="Message Flow" value="Calling Salesforce..."/>
+   </log>
+
+   <salesforce.query configKey="fooSFCredentials">
+      <batchSize>200</batchSize>
+      <queryString>select id,name from Account</queryString>
+   </salesforce.query>
+
+   <!-- mediation logic : data mapping, filtering, spliting etc.  -->
+</sequence>

@@ -1,0 +1,36 @@
+map_S_root_S_orders = function(){ 
+var outputorders={};
+
+
+
+
+
+
+outputorders = {};
+
+
+
+
+outputorders.order = [];
+
+for(i_order in inputroot.orders.order){
+
+outputorders.order[i_order] = {};
+
+
+
+
+outputorders.order[i_order].quantity = inputroot.orders.order[i_order].quantity;
+outputorders.order[i_order].unitPrice = inputroot.orders.order[i_order].unitPrice;
+outputorders.order[i_order].name = inputroot.orders.order[i_order].name;
+outputorders.order[i_order].id = inputroot.orders.order[i_order].id;
+outputorders.order[i_order].description = '<DESC> :: '.concat('',inputroot.orders.order[i_order].description);
+
+}
+return outputorders;
+};
+
+
+
+
+

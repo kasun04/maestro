@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_DqtUwEL8EeaWuohY4s4Row" type="DataMapper" name="order_proc_mapping_config.datamapper_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_DvtwkEL8EeaWuohY4s4Row" type="2002" fontName=".SF NS Text">
+    <children xmi:type="notation:Shape" xmi:id="_GZ9wUEL8EeaWuohY4s4Row" type="3002" fontName=".SF NS Text">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GZ9wUkL8EeaWuohY4s4Row" type="5002"/>
+      <children xmi:type="notation:Shape" xmi:id="_GaSgcEL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_GaSgckL8EeaWuohY4s4Row" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_Gaf70EL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_Gaf70kL8EeaWuohY4s4Row" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_GanQkEL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_GanQkkL8EeaWuohY4s4Row" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_GaulUEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+              <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.0/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GaulUUL8EeaWuohY4s4Row" x="-1" y="1"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_GavMYEL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+              <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.0/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GavMYUL8EeaWuohY4s4Row"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GanQkUL8EeaWuohY4s4Row"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_GanQk0L8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_GanQlUL8EeaWuohY4s4Row" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_Ga_rEEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+              <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.1/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ga_rEUL8EeaWuohY4s4Row" x="-1" y="1"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Ga_rEkL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+              <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.1/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ga_rE0L8EeaWuohY4s4Row"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GanQlEL8EeaWuohY4s4Row"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_Gan3oEL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_Gan3okL8EeaWuohY4s4Row" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_GbI1AEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+              <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.2/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GbI1AUL8EeaWuohY4s4Row" x="-1" y="1"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_GbJcEEL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+              <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.2/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GbJcEUL8EeaWuohY4s4Row"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gan3oUL8EeaWuohY4s4Row"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_Gan3o0L8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_Gan3pUL8EeaWuohY4s4Row" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_GbSmAEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+              <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.3/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GbSmAUL8EeaWuohY4s4Row" x="-1" y="1"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_GbSmAkL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+              <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.3/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GbSmA0L8EeaWuohY4s4Row"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gan3pEL8EeaWuohY4s4Row"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_Gan3pkL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+            <children xmi:type="notation:DecorationNode" xmi:id="_Gan3qEL8EeaWuohY4s4Row" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_GbcXAEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+              <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.4/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GbcXAUL8EeaWuohY4s4Row" x="-1" y="1"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Gbc-EEL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+              <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.4/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gbc-EUL8EeaWuohY4s4Row"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gan3p0L8EeaWuohY4s4Row"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_GaoesEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GaoesUL8EeaWuohY4s4Row" x="-1" y="-11"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_GaoeskL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gaoes0L8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gaf70UL8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_Gaf700L8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+          <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gaf71EL8EeaWuohY4s4Row" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_Gaf71UL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+          <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gaf71kL8EeaWuohY4s4Row"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GaSgcUL8EeaWuohY4s4Row"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GaSgc0L8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+        <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GaSgdEL8EeaWuohY4s4Row" x="-1" y="-11"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_GaTHgEL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+        <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GaTHgUL8EeaWuohY4s4Row"/>
+      </children>
+      <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GZ9wUUL8EeaWuohY4s4Row"/>
+    </children>
+    <element xmi:type="datamapper:Input" href="order_proc_mapping_config.datamapper#//@input"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DvtwkUL8EeaWuohY4s4Row" x="27" y="126" width="250" height="160"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_DvuXoEL8EeaWuohY4s4Row" type="2003" fontName=".SF NS Text">
+    <children xmi:type="notation:Shape" xmi:id="_JSakIEL8EeaWuohY4s4Row" type="3011" fontName=".SF NS Text">
+      <children xmi:type="notation:DecorationNode" xmi:id="_JSakIkL8EeaWuohY4s4Row" type="5003"/>
+      <children xmi:type="notation:Shape" xmi:id="_JSnYcEL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_JSn_gEL8EeaWuohY4s4Row" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_JSvUQEL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JSvUQkL8EeaWuohY4s4Row" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_JS2pAEL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JS2pAUL8EeaWuohY4s4Row" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JS2pAkL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JS2pA0L8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSvUQUL8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JSvUQ0L8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JSvURUL8EeaWuohY4s4Row" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_JS_L4EL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.1/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JS_L4UL8EeaWuohY4s4Row" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JS_y8EL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.1/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JS_y8UL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSvUREL8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JSvURkL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JSvUSEL8EeaWuohY4s4Row" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_JTI84EL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.2/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTI84UL8EeaWuohY4s4Row" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JTI84kL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.2/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTI840L8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSvUR0L8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JSv7UEL8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JSv7UkL8EeaWuohY4s4Row" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_JTSt4EL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.3/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTSt4UL8EeaWuohY4s4Row" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JTTU8EL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.3/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTTU8UL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.3"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSv7UUL8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JSv7U0L8EeaWuohY4s4Row" type="3003" fontName=".SF NS Text">
+          <children xmi:type="notation:DecorationNode" xmi:id="_JSv7VUL8EeaWuohY4s4Row" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_JTdF8EL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.4/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTdF8UL8EeaWuohY4s4Row" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_JTdtAEL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.4/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JTdtAUL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@node.4"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSv7VEL8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JSv7VkL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+          <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSv7V0L8EeaWuohY4s4Row" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_JSwiYEL8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+          <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSwiYUL8EeaWuohY4s4Row"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSnYcUL8EeaWuohY4s4Row"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_JSn_gUL8EeaWuohY4s4Row" type="3020" fontName=".SF NS Text">
+        <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSn_gkL8EeaWuohY4s4Row" x="-1" y="-11"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_JSn_g0L8EeaWuohY4s4Row" type="3019" fontName=".SF NS Text">
+        <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSn_hEL8EeaWuohY4s4Row"/>
+      </children>
+      <element xmi:type="datamapper:TreeNode" href="order_proc_mapping_config.datamapper#//@output/@treeNode.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JSakIUL8EeaWuohY4s4Row"/>
+    </children>
+    <element xmi:type="datamapper:Output" href="order_proc_mapping_config.datamapper#//@output"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DvuXoUL8EeaWuohY4s4Row" x="837" y="144" width="250" height="140"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Mag9gEL8EeaWuohY4s4Row" type="2006" fontName=".SF NS Text">
+    <children xmi:type="notation:Shape" xmi:id="_ManrMEL8EeaWuohY4s4Row" type="3012" fontName=".SF NS Text">
+      <children xmi:type="notation:Shape" xmi:id="_Mar8oEL8EeaWuohY4s4Row" type="3013" fontName=".SF NS Text">
+        <children xmi:type="notation:Shape" xmi:id="_MbOIIEL8EeaWuohY4s4Row" type="3014" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_MbRLcEL8EeaWuohY4s4Row" type="3015" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@leftContainer/@leftConnectors.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MbRLcUL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:OperatorLeftConnector" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@leftContainer/@leftConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MbOIIUL8EeaWuohY4s4Row"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_MbZHQEL8EeaWuohY4s4Row" type="3014" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_MbZuUEL8EeaWuohY4s4Row" type="3015" fontName=".SF NS Text">
+            <element xmi:type="datamapper:InNode" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@leftContainer/@leftConnectors.1/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MbZuUUL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:OperatorLeftConnector" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@leftContainer/@leftConnectors.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MbZHQUL8EeaWuohY4s4Row"/>
+        </children>
+        <element xmi:type="datamapper:OperatorLeftContainer" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@leftContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mar8oUL8EeaWuohY4s4Row"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_MasjsEL8EeaWuohY4s4Row" type="3016" fontName=".SF NS Text">
+        <children xmi:type="notation:Shape" xmi:id="_Mbpl8EL8EeaWuohY4s4Row" type="3017" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_MbtQUEL8EeaWuohY4s4Row" type="3018" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MbtQUUL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:OperatorRightConnector" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mbpl8UL8EeaWuohY4s4Row"/>
+        </children>
+        <element xmi:type="datamapper:OperatorRightContainer" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@rightContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MasjsUL8EeaWuohY4s4Row"/>
+      </children>
+      <element xmi:type="datamapper:OperatorBasicContainer" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ManrMUL8EeaWuohY4s4Row"/>
+    </children>
+    <element xmi:type="datamapper:Concat" href="order_proc_mapping_config.datamapper#//@operators.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mag9gUL8EeaWuohY4s4Row" x="540" y="387"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_NGAKgEL8EeaWuohY4s4Row" type="2008" fontName=".SF NS Text">
+    <children xmi:type="notation:Shape" xmi:id="_NGEb8EL8EeaWuohY4s4Row" type="3012" fontName=".SF NS Text">
+      <children xmi:type="notation:Shape" xmi:id="_NGGRIEL8EeaWuohY4s4Row" type="3013" fontName=".SF NS Text">
+        <element xmi:type="datamapper:OperatorLeftContainer" href="order_proc_mapping_config.datamapper#//@operators.1/@basicContainer/@leftContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NGGRIUL8EeaWuohY4s4Row"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_NGGRIkL8EeaWuohY4s4Row" type="3016" fontName=".SF NS Text">
+        <children xmi:type="notation:Shape" xmi:id="_NGhu8EL8EeaWuohY4s4Row" type="3017" fontName=".SF NS Text">
+          <children xmi:type="notation:Shape" xmi:id="_NGiWAEL8EeaWuohY4s4Row" type="3018" fontName=".SF NS Text">
+            <element xmi:type="datamapper:OutNode" href="order_proc_mapping_config.datamapper#//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NGiWAUL8EeaWuohY4s4Row"/>
+          </children>
+          <element xmi:type="datamapper:OperatorRightConnector" href="order_proc_mapping_config.datamapper#//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NGhu8UL8EeaWuohY4s4Row"/>
+        </children>
+        <element xmi:type="datamapper:OperatorRightContainer" href="order_proc_mapping_config.datamapper#//@operators.1/@basicContainer/@rightContainer"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NGGRI0L8EeaWuohY4s4Row"/>
+      </children>
+      <element xmi:type="datamapper:OperatorBasicContainer" href="order_proc_mapping_config.datamapper#//@operators.1/@basicContainer"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NGEb8UL8EeaWuohY4s4Row"/>
+    </children>
+    <element xmi:type="datamapper:Constant" href="order_proc_mapping_config.datamapper#//@operators.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NGAKgUL8EeaWuohY4s4Row" x="315" y="414"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_DqtUwUL8EeaWuohY4s4Row"/>
+  <element xmi:type="datamapper:DataMapperRoot" href="order_proc_mapping_config.datamapper#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_KCf9QEL8EeaWuohY4s4Row" type="4001" source="_GavMYEL8EeaWuohY4s4Row" target="_JS2pAEL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_KCf9QUL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KCf9QkL8EeaWuohY4s4Row" points="[-1, 0, -405, 18]$[403, -18, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KCrjcEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KCrjcUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_UJwhIEL8EeaWuohY4s4Row" type="4001" source="_NGiWAEL8EeaWuohY4s4Row" target="_MbRLcEL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_UJwhIUL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@operators.1/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UJwhIkL8EeaWuohY4s4Row" points="[-1, 0, -279, 57]$[277, -57, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UJ0ykEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UJ0ykUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_UwzTAEL8EeaWuohY4s4Row" type="4001" source="_GbJcEEL8EeaWuohY4s4Row" target="_MbZuUEL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_UwzTAUL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UwzTAkL8EeaWuohY4s4Row" points="[-1, 0, -283, -169]$[281, 169, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Uw1IMEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Uw1IMUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_V1segEL8EeaWuohY4s4Row" type="4001" source="_Ga_rEkL8EeaWuohY4s4Row" target="_JS_L4EL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_V1segUL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V1segkL8EeaWuohY4s4Row" points="[-1, 0, -405, 18]$[403, -18, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V1uTsEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V1uTsUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_XbLOkEL8EeaWuohY4s4Row" type="4001" source="_MbtQUEL8EeaWuohY4s4Row" target="_JTI84EL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_XbLOkUL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@operators.0/@basicContainer/@rightContainer/@rightConnectors.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XbLOkkL8EeaWuohY4s4Row" points="[-1, 0, -82, 113]$[80, -113, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XbNDwEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XbNDwUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_YDHYUEL8EeaWuohY4s4Row" type="4001" source="_GbSmAkL8EeaWuohY4s4Row" target="_JTSt4EL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_YDHYUUL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.3/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YDHYUkL8EeaWuohY4s4Row" points="[-1, 0, -405, 20]$[403, -20, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YDImcEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YDImcUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_Ymmf4EL8EeaWuohY4s4Row" type="4001" source="_Gbc-EEL8EeaWuohY4s4Row" target="_JTdF8EL8EeaWuohY4s4Row">
+    <styles xmi:type="notation:FontStyle" xmi:id="_Ymmf4UL8EeaWuohY4s4Row" fontName=".SF NS Text"/>
+    <element xmi:type="datamapper:DataMapperLink" href="order_proc_mapping_config.datamapper#//@input/@treeNode.0/@node.0/@node.0/@node.4/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Ymmf4kL8EeaWuohY4s4Row" points="[-1, 0, -405, 20]$[403, -20, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YmnuAEL8EeaWuohY4s4Row" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YmnuAUL8EeaWuohY4s4Row" id="CENTER"/>
+  </edges>
+</notation:Diagram>

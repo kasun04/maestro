@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="OrderManagerHTTPService"
+     context="/ordermanager">
+    <resource methods="POST GET" url-mapping="/orders">
+        <inSequence>
+            <log level="custom">
+                <property name="Message Flow" value="== Order Received =="/>
+            </log>
+            <switch source="$axis2:HTTP_METHOD">
+                <case regex="POST">
+                    <property name="order_id"
+                              expression="json-eval($.orders.order[0].id)"/>
+                    <property name="order_file_name"
+                              expression="fn:concat('/Users/kasun/development/deployment/maestro/wso2esb-5.0.0-BETA/sample_resources/orders/',$ctx:order_id, '.json')"/>
+                    <log level="custom">
+                        <property name="Message Flow" value="--- Order : Create ---"></property>
+                        <property name="Message Flow" expression="json-eval($.orders.order[0])"></property>
+                        <property name="Param" expression="$ctx:order_file_name"></property>
+                    </log>
+                    <fileconnector.create>
+                        <source>{$ctx:order_file_name}</source>
+                        <inputContent>{json-eval($.orders.order[0])}</inputContent>
+                    </fileconnector.create>
+                </case>
+                <case regex="GET">
+                    <log level="custom">
+                        <property name="Message Flow" value="--- Order : Get ---"></property>
+                    </log>
+
+                    <property name="order_file_name"
+                              expression="fn:concat('/Users/kasun/development/deployment/maestro/wso2esb-5.0.0-BETA/sample_resources/orders/',$ctx:query.param.orderid, '.json')"/>
+
+                    <fileconnector.read>
+                        <source>/Users/kasun/development/deployment/maestro/wso2esb-5.0.0-BETA/sample_resources/orders/A234R.json</source>
+                        <contentType>application/json</contentType>
+                    </fileconnector.read>
+                    <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
+                    <log level="full"/>
+                    <property name="NO_ENTITY_BODY" action="remove" scope="axis2"/>
+                    <respond/>
+
+                </case>
+
+            </switch>
+
+        </inSequence>
+    </resource>
+</api>

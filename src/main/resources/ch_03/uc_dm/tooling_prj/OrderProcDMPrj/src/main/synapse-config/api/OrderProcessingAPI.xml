@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/orderproc" name="OrderProcessingAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <datamapper config="gov:datamapper/order_proc_mapping_config.dmc" inputSchema="gov:datamapper/order_proc_mapping_config_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/order_proc_mapping_config_outputSchema.json" outputType="XML"/>
+            <call>
+                <endpoint key="OrderProcessingServiceEP"/>
+            </call>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

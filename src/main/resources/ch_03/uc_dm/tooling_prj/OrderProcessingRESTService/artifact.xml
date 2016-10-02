@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="JSON2CSV_OrderProcessor" groupId="com.example.OrderProcessingRESTService.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/JSON2CSV_OrderProcessor.xml</file>
+    </artifact>
+</artifacts>

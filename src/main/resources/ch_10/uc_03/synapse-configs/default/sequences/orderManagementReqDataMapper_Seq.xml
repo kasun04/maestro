@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="orderManagementReqDataMapper_Seq">
+
+   <property name="OUT_ONLY" value="true"/>
+   <property name="websocket.accept.contenType" scope="axis2" value="application/json"/>
+
+   <switch source="$ctx:websocket.source.handshake.present">
+      <case regex="true">
+         <!-- no data mapping for handshake messages -->
+      </case>
+      <default>
+         <!-- ... Data Mapping applied for all WebSockets data frames ...-->
+      </default>
+   </switch>
+
+   <call>
+      <endpoint>
+         <address uri="ws://localhost:8082/websocket"/>
+      </endpoint>
+   </call>
+
+</sequence>

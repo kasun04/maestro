@@ -1,0 +1,16 @@
+<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse"
+                 name="ABCHealthcare_HL7Receiver_AppAck"
+                 sequence="ABCHelathcareHL7_to_SOAP_with_AppAck"
+                 onError="fault"
+                 protocol="hl7"
+                 suspend="false">
+   <parameters>
+      <parameter name="inbound.hl7.Port">20001</parameter>
+      <parameter name="inbound.hl7.AutoAck">false</parameter>
+      <parameter name="inbound.hl7.ValidateMessage">true</parameter>
+      <parameter name="inbound.hl7.TimeOut">10000</parameter>
+      <parameter name="inbound.hl7.CharSet">UTF-8</parameter>
+      <parameter name="inbound.hl7.BuildInvalidMessages">false</parameter>
+      <parameter name="inbound.hl7.PassThroughInvalidMessages">false</parameter>
+   </parameters>
+</inboundEndpoint>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="OrderManager_WSockToHTTP">
+   <switch source="$ctx:websocket.source.handshake.present">
+      <case regex="true">
+         <!-- Ignoring handshake messages -->
+         <drop/>
+      </case>
+      <default>
+         <!-- ... Data Mapper ...-->
+         <call>
+            <endpoint>
+               <http uri-template="http://localhost:9090/OrderManagementRESTAPI" method="POST"/>
+            </endpoint>
+         </call>
+         <!-- ... Data Mapper ...-->
+         <respond/>
+      </default>
+   </switch>
+</sequence>

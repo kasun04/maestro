@@ -1,0 +1,19 @@
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="PriceManagementService"
+       transports="http"
+       startOnLoad="true"
+       trace="enable"
+       statistics="enable">
+    <target>
+        <inSequence>
+            <log level="full"/>
+            <!-- ... data mapper ... -->
+            <call>
+                <endpoint name="sap02_bapi_ep">
+                    <address uri="bapi:/SAP_02"/>
+                </endpoint>
+            </call>
+        </inSequence>
+        <outSequence/>
+    </target>
+</proxy>

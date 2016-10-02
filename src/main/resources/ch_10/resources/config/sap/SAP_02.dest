@@ -1,0 +1,13 @@
+jco.client.client=800
+jco.client.user=wso2_user
+jco.client.passwd=wso2pass14
+jco.client.lang=en
+jco.client.ashost=/H/<IP>/S/3299/H/<IP>/S/3200
+jco.client.gwserv=3300
+jco.client.sysnr=00
+jco.client.idle_timeout=300
+jco.client.logon=0
+jco.client.msserv=3600
+jco.client.trace=0
+jco.client.getsso2=0
+jco.client.r3name=CPT

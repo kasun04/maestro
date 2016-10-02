@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="ABCHelathcareHL7_to_SOAP_with_AppAck" onError="ABCHelathcareHL7_Fault">
+
+   <log level="full">
+      <property name="Status" value="== HL7 Message Received =="/>
+   </log>
+   <property name="HL7_APPLICATION_ACK" value="true" scope="axis2"/>
+
+   <!-- ... Data Mapper ...-->
+   <call>
+      <endpoint name="MedicalRecordsWS">
+         <address uri="http://localhost:6060/MedicalRecords" format="soap11"/>
+      </endpoint>
+   </call>
+
+   <log level="full">
+      <property name="Status" value="== Successful : Sending Application ACK =="/>
+   </log>
+
+   <property name="HL7_RESULT_MODE" value="ACK" scope="axis2"/>
+   <property name="HL7_GENERATE_ACK" value="true" scope="axis2"/>
+   <respond/>
+
+</sequence>
