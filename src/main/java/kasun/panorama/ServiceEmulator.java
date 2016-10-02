@@ -208,6 +208,7 @@ public class ServiceEmulator {
 
 
     public static void runServiceOrchetrationbackends() {
+        System.out.println("Path : " +System.getProperty("user.dir"));
 
         Emulator.getHttpEmulator()
                 .server()
