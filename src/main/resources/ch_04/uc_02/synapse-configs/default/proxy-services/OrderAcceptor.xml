@@ -18,5 +18,7 @@
             </call>
         </inSequence>
     </target>
+
+    <!-- [1] -->
     <description/>
 </proxy>
