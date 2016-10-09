@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016, Kasun Indrasiri. (http://kasunpanorama.blogspot.com/) All Rights Reserved.
+ -->
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.samples">
 	<soapenv:Header/>
 	<soapenv:Body>

@@ -1,7 +1,7 @@
 #!/bin/bash
 
  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-     echo "Usage : ./deploy.sh ch_01 uc_01 <ESB_HOME>"
+     echo "Usage : ./deploy.sh ch_01 uc_011 <ESB_HOME>"
      exit 0
  fi
 
