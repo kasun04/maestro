@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016, Kasun Indrasiri. (http://kasunpanorama.blogspot.com/) All Rights Reserved.
+ -->
+
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="StockQuoteInfoProvider"
+     context="/StockQuoteInfo">
+    <resource methods="POST">
+        <inSequence>
+            <payloadFactory media-type="xml">
+                <format>
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                                      xmlns:ser="http://services.samples">
+                        <soapenv:Header/>
+                        <soapenv:Body>
+                            <ser:getSimpleQuote>
+                                <ser:symbol>$1</ser:symbol>
+                            </ser:getSimpleQuote>
+                        </soapenv:Body>
+                    </soapenv:Envelope>
+                </format>
+                <args>
+                    <arg evaluator="json" expression="$.getFinancialQuote.company"/>
+                </args>
+            </payloadFactory>
+            <header name="Action" value="urn:getQuote"/>
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:6060/services/StockQuoteService"
+                             format="soap11"/>
+                </endpoint>
+            </call>
+            <property name="messageType"
+                      value="application/json"
+                      scope="axis2"
+                      type="STRING"/>
+            <respond/>
+        </inSequence>
+    </resource>
+</api>
