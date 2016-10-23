@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="SAP_to_Salesforce">
+    <property description="tourID" expression="//TOUR_ID" name="tourID" scope="default" type="STRING"/>
+    <property name="APOS" scope="default" type="STRING" value="'"/>
+    <property description="queryString"
+              expression="fn:concat('SELECT Name,ID,organization__c,username__c,queryType__c,mission__c,tourID__c,approved__c,orderID__c,orderItem__c FROM Request__c WHERE tourID__c =',syn:get-property('APOS'),get-property('tourID'),syn:get-property('APOS'))"
+              name="QUERY" scope="default" type="STRING"/>
+    <salesforce.query configKey="SFConfig">
+        <batchSize>1</batchSize>
+        <queryString>{$ctx:QUERY}</queryString>
+    </salesforce.query>
+    <property description="Id" expression="//sf:Id" name="Id" scope="default" type="STRING"
+              xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+    <property description="IdModified" expression="fn:substring(get-property('Id'),0,16)" name="IdModi" scope="default"
+              type="STRING"/>
+    <payloadFactory media-type="xml">
+        <format>
+            <sfdc:sobjects type="Request__c" xmlns:sfdc="sfdc">
+                <sfdc:sobject>
+                    <sfdc:tourID__c>$1</sfdc:tourID__c>
+                    <sfdc:Name>$2</sfdc:Name>
+                    <sfdc:Id>$3</sfdc:Id>
+                    <sfdc:organization__c>$4</sfdc:organization__c>
+                    <sfdc:username__c>$5</sfdc:username__c>
+                    <sfdc:queryType__c>$6</sfdc:queryType__c>
+                    <sfdc:mission__c>$7</sfdc:mission__c>
+                    <sfdc:orderID__c>$8</sfdc:orderID__c>
+                    <sfdc:orderItem__c>$9</sfdc:orderItem__c>
+                    <sfdc:approved__c>1</sfdc:approved__c>
+                </sfdc:sobject>
+            </sfdc:sobjects>
+        </format>
+        <args>
+            <arg evaluator="xml" expression="get-property('tourID')"/>
+            <arg evaluator="xml" expression="//sf:Name" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+            <arg evaluator="xml" expression="get-property('IdModi')"/>
+            <arg evaluator="xml" expression="//sf:organization__c" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+            <arg evaluator="xml" expression="//sf:username__c" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+            <arg evaluator="xml" expression="//sf:queryType__c" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+            <arg evaluator="xml" expression="//sf:mission__c" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+            <arg evaluator="xml" expression="//sf:orderID__c" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+            <arg evaluator="xml" expression="//sf:orderItem__c" xmlns:sf="urn:sobject.partner.soap.sforce.com"/>
+        </args>
+    </payloadFactory>
+    <salesforce.update configKey="SFConfig">
+        <allOrNone>0</allOrNone>
+        <allowFieldTruncate>0</allowFieldTruncate>
+        <sobjects xmlns:sfdc="sfdc">{//sfdc:sobjects}</sobjects>
+    </salesforce.update>
+    <drop/>
+</sequence>

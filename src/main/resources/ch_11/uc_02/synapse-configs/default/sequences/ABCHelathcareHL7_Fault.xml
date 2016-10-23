@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="ABCHelathcareHL7_Fault">
+
+   <log level="full">
+      <property name="Fault Message : " value="Application NACK"/>
+   </log>
+
+   <property name="HL7_RESULT_MODE" value="NACK" scope="axis2"/>
+   <property name="HL7_NACK_MESSAGE" value="error msg" scope="axis2"/>
+   <respond/>
+
+</sequence>

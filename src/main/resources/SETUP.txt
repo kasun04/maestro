@@ -3,7 +3,7 @@
 Prerequisites
 =============
 
-- Install JDK
+- Install JDK 1.8 or higher.
 - Setup JAVA_HOME (https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/)
 - Curl is required for trying out sample use cases. (https://curl.haxx.se/)
 
@@ -24,3 +24,4 @@ Installing and starting WSO2 ESB 5.0
 
 
 - You have just installed and started WSO2 ESB successfully!
+

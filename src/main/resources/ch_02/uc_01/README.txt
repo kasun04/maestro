@@ -7,14 +7,14 @@ Pre-req
 =======
 
 - WSO2 ESB installation : https://github.com/kasun04/maestro/blob/master/src/main/resources/SETUP.txt
-- Download or clone source code : https://github.com/kasun04/maestro
+- Download or clone source code from : https://github.com/kasun04/maestro
 
 
 
 Starting Backend Services
 =========================
 
-- Find maestro/maestro-1.0.0.jar and rn java -jar maestro-1.0.0.jar to start the backend services.
+- Find maestro/maestro-1.0.0.jar and run  'java -jar maestro-1.0.0.jar' to start the backend services.
 - Observe the following logs in a successfully started services.
 
     kasun@macbookpro:~/development/source/git/kasun04/maestro$ java -jar maestro-1.0.0.jar
@@ -32,12 +32,14 @@ Starting Backend Services
 Deploying sample configuration
 ==============================
 
-- Go to maestro/src/main/resources deploy sample configuration of the chapter 2. : sh deploy.sh ch_02 <ESB_HOME>
+- Go to maestro/src/main/resources deploy sample configuration for use cases of the chapter 2. :
+    >> sh deploy.sh ch_02 uc_01 <ESB_HOME>
+- Observe ESB logs/console output for the status of new artifacts that you have deployed.
 
 Running the client
 ==================
 
-Execute following inside /maestro/src/main/resources/ch_02
+Execute following inside /maestro/src/main/resources/ch_02/uc_01
 
 curl -X POST -H 'Content-Type: application/json' -d @getQuoteMobileClientRequest.json http://localhost:8280/StockQuoteInfo
 

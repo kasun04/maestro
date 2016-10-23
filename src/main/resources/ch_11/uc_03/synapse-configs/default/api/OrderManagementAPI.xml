@@ -1,0 +1,18 @@
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="OrderManagementAPI"
+     context="/ordermgt">
+    <resource methods="POST">
+        <inSequence>
+            <!-- ... data mapping ... -->
+            <property name="OUT_ONLY" value="true"/>
+            <property name="FORCE_SC_ACCEPTED" scope="axis2"
+                      type="STRING" value="true"/>
+            <property name="websocket.accept.contenType" scope="axis2" value="application/json"/>
+            <call>
+                <endpoint>
+                    <address uri="ws://localhost:8082/websocket"/>
+                </endpoint>
+            </call>
+        </inSequence>
+    </resource>
+</api>

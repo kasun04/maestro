@@ -8,7 +8,7 @@
    <property name="OUT_ONLY" value="true"/>
    <call>
       <endpoint>
-         <address uri="ws://127.0.0.1:8080/websocket"/>
+         <address uri="ws://localhost:8082/wsoc/OrderMgtService"/>
       </endpoint>
    </call>
 </sequence>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="orderManagementServerPushDataMapper_Seq">
+
+   <log level="custom">
+      <property name="Message Flow" value="ServerPush message received"/>
+   </log>
+
+   <switch source="$ctx:websocket.source.handshake.present">
+      <case regex="true">
+         <!-- no data mapping for handshake messages -->
+      </case>
+      <default>
+         <!-- ... Data Mapping applied for all WebSockets data frames ...-->
+      </default>
+   </switch>
+
+   <respond/>
+</sequence>
