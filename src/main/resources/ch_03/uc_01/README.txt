@@ -5,10 +5,10 @@
  */
 
 
-Use Cases - Fundamentals of WSO2 ESB
-====================================
+Use Cases - Fundamentals of WSO2 ESB : Using Proxy Services
+===========================================================
 
-This document contains the instructions to try out the samples of 'Fundamentals of WSO2 ESB'.
+This document contains the instructions to try out the sample 'Using Proxy Services'.
 
 
 Pre-req
@@ -56,7 +56,7 @@ curl -v -X POST -H 'Content-Type: text/xml' -H 'SOAPAction: http://www.example.o
 Verification
 ============
 
-Successful execution of the sample should give you the following response at the curl/client side.  
+Successful execution of the sample should give you the following response at the curl/client side.
 
 < HTTP/1.1 200 OK
 < Content-Type: text/xml; charset=UTF-8

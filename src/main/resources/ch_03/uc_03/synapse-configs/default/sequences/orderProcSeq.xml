@@ -6,7 +6,7 @@
     <header name="Action" value="urn:getQuote"/>
     <call>
         <endpoint>
-            <address uri="http://localhost:6060/services/StockQuoteService"
+            <address uri="http://localhost:6060/services/OrderProcessorService"
                      format="soap11"/>
         </endpoint>
     </call>

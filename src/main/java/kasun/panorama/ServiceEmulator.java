@@ -138,6 +138,7 @@ public class ServiceEmulator {
                               .withBody(pizzaShopPayload)
                               .withStatusCode(HttpResponseStatus.OK)
                               .withHeader("Content-Type", "text/xml"))
+
                 /* SOAP Service : OrderProcessorService */
                 .when(request()
                               .withPath("OrderProcessorService")

@@ -6,6 +6,6 @@
                  protocol="http"
                  suspend="false">
    <parameters>
-      <parameter name="inbound.http.port">9191</parameter>
+      <parameter name="inbound.http.port">5151</parameter>
    </parameters>
 </inboundEndpoint>
