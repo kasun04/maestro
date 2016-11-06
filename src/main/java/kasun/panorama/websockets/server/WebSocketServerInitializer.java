@@ -1,3 +1,8 @@
+/*
+ *
+ * Copyright (c) 2016, Kasun Indrasiri  All Rights Reserved.
+ *
+ */
 package kasun.panorama.websockets.server;
 
 import io.netty.channel.ChannelInitializer;
@@ -12,6 +17,7 @@ public class WebSocketServerInitializer extends ChannelInitializer<SocketChannel
 
     public WebSocketServerInitializer(String path) {
         websocketPath = path;
+        int a = 0;
 
     }
 

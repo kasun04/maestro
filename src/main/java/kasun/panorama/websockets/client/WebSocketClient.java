@@ -1,3 +1,8 @@
+/*
+ *
+ * Copyright (c) 2016, Kasun Indrasiri  All Rights Reserved.
+ *
+ */
 package kasun.panorama.websockets.client;
 
 import io.netty.bootstrap.Bootstrap;
@@ -28,14 +33,12 @@ public class WebSocketClient {
 //    static final String URL = System.getProperty("url", "ws://127.0.0.1:8080/websocket");
 
 
-
-
     static final String URL = System.getProperty("url", "ws://127.0.0.1:9091");
 
     public static void main(String[] args) throws Exception {
         URI uri = new URI(URL);
-        String scheme = uri.getScheme() == null? "ws" : uri.getScheme();
-        final String host = uri.getHost() == null? "127.0.0.1" : uri.getHost();
+        String scheme = uri.getScheme() == null ? "ws" : uri.getScheme();
+        final String host = uri.getHost() == null ? "127.0.0.1" : uri.getHost();
         final int port;
         if (uri.getPort() == -1) {
             if ("ws".equalsIgnoreCase(scheme)) {
@@ -53,7 +56,6 @@ public class WebSocketClient {
             System.err.println("Only WS(S) is supported.");
             return;
         }
-
 
 
         EventLoopGroup group = new NioEventLoopGroup();
@@ -94,7 +96,7 @@ public class WebSocketClient {
                     ch.closeFuture().sync();
                     break;
                 } else if ("ping".equals(msg.toLowerCase())) {
-                    WebSocketFrame frame = new PingWebSocketFrame(Unpooled.wrappedBuffer(new byte[] {8, 1, 8, 1 }));
+                    WebSocketFrame frame = new PingWebSocketFrame(Unpooled.wrappedBuffer(new byte[]{8, 1, 8, 1}));
                     ch.writeAndFlush(frame);
                 } else {
                     WebSocketFrame frame = new TextWebSocketFrame(msg);

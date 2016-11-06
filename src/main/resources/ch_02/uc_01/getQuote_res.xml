@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016, Kasun Indrasiri.  All Rights Reserved.
+ -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Body>
+        <ns:getQuoteResponse xmlns:ns="http://services.samples">
+            <ns:return xsi:type="ax21:GetQuoteResponse" xmlns:ax21="http://services.samples/xsd"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <ax21:change>4.289346010366909</ax21:change>
+                <ax21:earnings>-9.6188785014457</ax21:earnings>
+                <ax21:high>62.74694943391316</ax21:high>
+                <ax21:last>60.42803830258261</ax21:last>
+                <ax21:lastTradeTimestamp>Sun Feb 14 09:17:43 IST 2016</ax21:lastTradeTimestamp>
+                <ax21:low>62.478265478558995</ax21:low>
+                <ax21:name>WSO2 Company</ax21:name>
+                <ax21:open>-59.48571708937672</ax21:open>
+                <ax21:peRatio>-49.01618229924337</ax21:peRatio>
+                <ax21:percentageChange>-7.603373984588675</ax21:percentageChange>
+                <ax21:prevClose>-56.413718686743685</ax21:prevClose>
+                <ax21:symbol>WSO2</ax21:symbol>
+                <ax21:volume>5629</ax21:volume>
+            </ns:return>
+        </ns:getQuoteResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,3 +1,8 @@
+/*
+ *
+ * Copyright (c) 2016, Kasun Indrasiri  All Rights Reserved.
+ *
+ */
 package kasun.panorama.websockets.server;
 
 
@@ -9,9 +14,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.util.CharsetUtil;
 
-/**
- * Generates the demo HTML page which is served at http://localhost:8080/
- */
+
 public final class WebSocketServerIndexPage {
 
     private static final String NEWLINE = "\r\n";

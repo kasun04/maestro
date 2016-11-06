@@ -1,6 +1,14 @@
+/*
+ *
+ * Copyright (c) 2016, Kasun Indrasiri  All Rights Reserved.
+ *
+ */
 
-Running Use Case 2.1
-====================
+
+Use Cases - Getting started with WSO2 ESB
+=========================================
+
+This document contains the instructions to try out the 'Getting started with WSO2 ESB' sample.
 
 
 Pre-req

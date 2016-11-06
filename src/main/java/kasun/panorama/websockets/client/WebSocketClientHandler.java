@@ -1,3 +1,8 @@
+/*
+ *
+ * Copyright (c) 2016, Kasun Indrasiri  All Rights Reserved.
+ *
+ */
 package kasun.panorama.websockets.client;
 
 import io.netty.channel.Channel;
