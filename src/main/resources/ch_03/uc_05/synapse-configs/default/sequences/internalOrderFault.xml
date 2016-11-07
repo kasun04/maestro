@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016, Kasun Indrasiri. (http://kasunpanorama.blogspot.com/) All Rights Reserved.
+  ~
+  -->
+
+<sequence name="InternalOrderMgmt" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="custom">
+        <property name="Messsage_Flow" value="== Internal Orders - Fault Seq ==="/>
+    </log>
+    <respond/>
+</sequence>

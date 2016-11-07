@@ -28,75 +28,54 @@ public class ServiceEmulator {
     public static final String URI_SERVICE_ORCHESTRATION = "/serviceorchestration";
 
     public static final String pizzaShopPayload = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
-                                                  "    <soapenv:Body>\n" +
-                                                  "        <pizzaMenu>\n" +
-                                                  "            <category>meats</category>\n" +
-                                                  "            <pizzas>\n" +
-                                                  "                <pizza>\n" +
-                                                  "                    <name>PRIMO MEATS</name>\n" +
-                                                  "                    <description>Premium Crushed Tomato Sauce made of 100% California grown vine ripened tomatoes topped\n" +
-                                                  "                        with premium salami, pepperoni, all-natural Italian sausage and seasoned pork.\n" +
-                                                  "                    </description>\n" +
-                                                  "                </pizza>\n" +
-                                                  "                <pizza>\n" +
-                                                  "                    <name>ITALIAN MEATBALL</name>\n" +
-                                                  "                    <description>Classic marinara sauce, classic meatballs, fresh red onions and diced Roma\n" +
-                                                  "                        tomatoes—flavored up with our Hut Favorite on the crust edge. Best on our famous Pan crust.\n" +
-                                                  "                    </description>\n" +
-                                                  "                </pizza>\n" +
-                                                  "                <pizza>\n" +
-                                                  "                    <name>PEPPERONI LOVER'S</name>\n" +
-                                                  "                    <description>Classic marinara sauce piled high with cheese and over 50% more authentic, old-world\n" +
-                                                  "                        pepperoni hand-placed on your pizza.\n" +
-                                                  "                    </description>\n" +
-                                                  "                </pizza>\n" +
-                                                  "            </pizzas>\n" +
-                                                  "        </pizzaMenu>\n" +
-                                                  "    </soapenv:Body>\n" +
-                                                  "</soapenv:Envelope>";
+            "    <soapenv:Body>\n" +
+            "        <pizzaMenu>\n" +
+            "            <category>meats</category>\n" +
+            "            <pizzas>\n" +
+            "                <pizza>\n" +
+            "                    <name>PRIMO MEATS</name>\n" +
+            "                    <description>Premium Crushed Tomato Sauce made of 100% California grown vine ripened tomatoes topped\n" +
+            "                        with premium salami, pepperoni, all-natural Italian sausage and seasoned pork.\n" +
+            "                    </description>\n" +
+            "                </pizza>\n" +
+            "                <pizza>\n" +
+            "                    <name>ITALIAN MEATBALL</name>\n" +
+            "                    <description>Classic marinara sauce, classic meatballs, fresh red onions and diced Roma\n" +
+            "                        tomatoes—flavored up with our Hut Favorite on the crust edge. Best on our famous Pan crust.\n" +
+            "                    </description>\n" +
+            "                </pizza>\n" +
+            "                <pizza>\n" +
+            "                    <name>PEPPERONI LOVER'S</name>\n" +
+            "                    <description>Classic marinara sauce piled high with cheese and over 50% more authentic, old-world\n" +
+            "                        pepperoni hand-placed on your pizza.\n" +
+            "                    </description>\n" +
+            "                </pizza>\n" +
+            "            </pizzas>\n" +
+            "        </pizzaMenu>\n" +
+            "    </soapenv:Body>\n" +
+            "</soapenv:Envelope>";
 
 
     public static final String stockquoteJsonPayload = "{\n" +
-                                                       "  \"getQuoteResponse\": {\n" +
-                                                       "    \"quote\": {\n" +
-                                                       "      \"change\": \"4.289346010366909\",\n" +
-                                                       "      \"earnings\": \"-9.6188785014457\",\n" +
-                                                       "      \"high\": \"62.74694943391316\",\n" +
-                                                       "      \"last\": \"60.42803830258261\",\n" +
-                                                       "      \"lastTradeTimestamp\": \"Sun Feb 14 09:17:43 IST 2016\",\n" +
-                                                       "      \"low\": \"62.478265478558995\",\n" +
-                                                       "      \"marketCap\": \"5803951.705881957\",\n" +
-                                                       "      \"name\": \"WSO2 Company\",\n" +
-                                                       "      \"open\": \"-59.48571708937672\",\n" +
-                                                       "      \"peRatio\": \"-49.01618229924337\",\n" +
-                                                       "      \"percentageChange\": \"-7.603373984588675\",\n" +
-                                                       "      \"prevClose\": \"-56.413718686743685\",\n" +
-                                                       "      \"symbol\": \"WSO2\",\n" +
-                                                       "      \"volume\": \"5629\"\n" +
-                                                       "    }\n" +
-                                                       "  }\n" +
-                                                       "}";
-
-    public static final String orderProcessingServicePayload = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ordproc=\"http://orders.samples\">\n" +
-                                                               "    <soapenv:Body>\n" +
-                                                               "        <ordproc:procOrderReponse>\n" +
-                                                               "            <processedOrders>\n" +
-                                                               "                <order>\n" +
-                                                               "                    <id>A234R</id>\n" +
-                                                               "                </order>\n" +
-                                                               "                <order>\n" +
-                                                               "                    <id>B234D</id>\n" +
-                                                               "                </order>\n" +
-                                                               "                <order>\n" +
-                                                               "                    <id>4RFG</id>\n" +
-                                                               "                </order>\n" +
-                                                               "                <order>\n" +
-                                                               "                    <id>GR8Y</id>\n" +
-                                                               "                </order>\n" +
-                                                               "            </processedOrders>\n" +
-                                                               "        </ordproc:procOrderReponse>\n" +
-                                                               "    </soapenv:Body>\n" +
-                                                               "</soapenv:Envelope>";
+            "  \"getQuoteResponse\": {\n" +
+            "    \"quote\": {\n" +
+            "      \"change\": \"4.289346010366909\",\n" +
+            "      \"earnings\": \"-9.6188785014457\",\n" +
+            "      \"high\": \"62.74694943391316\",\n" +
+            "      \"last\": \"60.42803830258261\",\n" +
+            "      \"lastTradeTimestamp\": \"Sun Feb 14 09:17:43 IST 2016\",\n" +
+            "      \"low\": \"62.478265478558995\",\n" +
+            "      \"marketCap\": \"5803951.705881957\",\n" +
+            "      \"name\": \"WSO2 Company\",\n" +
+            "      \"open\": \"-59.48571708937672\",\n" +
+            "      \"peRatio\": \"-49.01618229924337\",\n" +
+            "      \"percentageChange\": \"-7.603373984588675\",\n" +
+            "      \"prevClose\": \"-56.413718686743685\",\n" +
+            "      \"symbol\": \"WSO2\",\n" +
+            "      \"volume\": \"5629\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}";
 
     public static void main(String args[]) {
         runServices();
@@ -112,43 +91,59 @@ public class ServiceEmulator {
 
                 /* SOAP Service : StockQuoteService*/
                 .when(request()
-                              .withPath("StockQuoteService")
-                              .withMethod(HttpMethod.POST)
-                              .withHeader("SOAPAction", "\"urn:getQuote\""))
+                        .withPath("StockQuoteService")
+                        .withMethod(HttpMethod.POST)
+                        .withHeader("SOAPAction", "\"urn:getQuote\""))
                 .then(response()
-                              .withBody(createPayload("src/main/resources/ch_02/uc_01/getQuote_res.xml"))
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "text/xml "))
+                        .withBody(createPayload("src/main/resources/ch_02/uc_01/getQuote_res.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "text/xml "))
 
                 /* Legacy PoX Service : BankInfoService */
                 .when(request()
-                              .withPath("BankInfoService")
-                              .withMethod(HttpMethod.POST)
-                              .withHeader("Content-Type", "application/xml"))
+                        .withPath("BankInfoService")
+                        .withMethod(HttpMethod.POST)
+                        .withHeader("Content-Type", "application/xml"))
                 .then(response()
-                              .withBody(createPayload("src/main/resources/ch_03/uc_01/BankInfoService_res.xml"))
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "application/xml"))
+                        .withBody(createPayload("src/main/resources/ch_03/uc_01/BankInfoService_res.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "application/xml"))
 
                 /* SOAP Service : PizzaShopService */
                 .when(request()
-                              .withPath("PizzaShopService")
-                              .withMethod(HttpMethod.POST))
+                        .withPath("PizzaShopService")
+                        .withMethod(HttpMethod.POST))
                 .then(response()
-                              .withBody(pizzaShopPayload)
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "text/xml"))
+                        .withBody(pizzaShopPayload)
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "text/xml"))
 
                 /* SOAP Service : OrderProcessorService */
                 .when(request()
-                              .withPath("OrderProcessorService")
-                              .withMethod(HttpMethod.POST))
+                        .withPath("OrderProcessorService")
+                        .withMethod(HttpMethod.POST))
                 .then(response()
-                              .withBody(orderProcessingServicePayload)
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "text/xml"))
+                        .withBody(createPayload("src/main/resources/ch_03/uc_04/OrderProcRes.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "text/xml"))
+
                 .operation().start();
 
+
+        Emulator.getHttpEmulator()
+                .server()
+                .given(configure().host("127.0.0.1").port(6061).context("/services")
+                        .withLogicDelay(60 * 1000)
+                        .randomConnectionClose(true))
+                /* Slow OrderProcessing Service : LegacyOrderProcessorService */
+                .when(request()
+                        .withPath("LegacyOrderProcessorService")
+                        .withMethod(HttpMethod.POST))
+                .then(response()
+                        .withBody(createPayload("src/main/resources/ch_03/uc_04/OrderProcRes.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "application/xml"))
+                .operation().start();
 
 
         Emulator.getHttpEmulator()
@@ -157,12 +152,12 @@ public class ServiceEmulator {
 
                 /* REST Service with delay : StockQuoteRESTService*/
                 .when(request()
-                              .withPath("StockQuoteRESTService")
-                              .withMethod(HttpMethod.POST))
+                        .withPath("StockQuoteRESTService")
+                        .withMethod(HttpMethod.POST))
                 .then(response()
-                              .withBody(stockquoteJsonPayload)
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "application/json "))
+                        .withBody(stockquoteJsonPayload)
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "application/json "))
                 .operation().start();
 
 
@@ -172,40 +167,37 @@ public class ServiceEmulator {
 
                 /* GeoLocationToPostalCodeService */
                 .when(request()
-                              .withPath("GeoLocationToPostalCodeService")
-                              .withMethod(HttpMethod.POST)
+                                .withPath("GeoLocationToPostalCodeService")
+                                .withMethod(HttpMethod.POST)
                               /*.withHeader("Content-Type", "application/json")*/)
                 .then(response()
-                              .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/GeoLocationToPostalCode_res.json"))
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "application/json"))
+                        .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/GeoLocationToPostalCode_res.json"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "application/json"))
 
                 /* PostalcodeToATMLocatorService */
                 .when(request()
-                              .withPath("PostalcodeToATMLocatorService")
-                              .withMethod(HttpMethod.POST)
+                                .withPath("PostalcodeToATMLocatorService")
+                                .withMethod(HttpMethod.POST)
                               /*.withHeader("SOAPAction", "urn:PostalcodeToATMLocatorService")*/)
                 .then(response()
-                              .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/PostalcodeToATMLocatorService_res.xml"))
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "text/xml"))
+                        .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/PostalcodeToATMLocatorService_res.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "text/xml"))
 
                 /* GeoLocationToAddressService */
                 .when(request()
-                              .withPath("GeoLocationToAddressService")
-                              .withMethod(HttpMethod.POST)
-                              .withHeader("Content-Type", "application/xml"))
+                        .withPath("GeoLocationToAddressService")
+                        .withMethod(HttpMethod.POST)
+                        .withHeader("Content-Type", "application/xml"))
                 .then(response()
-                              .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/GeoLocationToAddress_res.xml"))
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "application/xml"))
+                        .withBody(createPayload("src/main/resources/ch_10/resources/sample_resources/message_formats/GeoLocationToAddress_res.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "application/xml"))
 
                 .operation().start();
 
     }
-
-
-
 
 
     public static String createPayload(String fileName) {
@@ -218,32 +210,32 @@ public class ServiceEmulator {
             br = new BufferedReader(new FileReader(fileName));
             while ((sCurrentLine = br.readLine()) != null) {
                 builder.append(sCurrentLine + "\n");
-             }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             try {
-                if (br != null)br.close();
+                if (br != null) br.close();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
         }
-        return   builder.toString();
+        return builder.toString();
     }
 
 
     public static void timeoutVerifyBE() {
         Emulator.getHttpEmulator()
                 .server()
-                .given(configure().host("127.0.0.1").port(9797).context("/Foo").withLogicDelay(1* 1000))
+                .given(configure().host("127.0.0.1").port(9797).context("/Foo").withLogicDelay(1 * 1000))
 
                 .when(request()
-                              .withPath("EchoService")
-                              .withMethod(HttpMethod.POST))
+                        .withPath("EchoService")
+                        .withMethod(HttpMethod.POST))
                 .then(response()
-                              .withBody(createPayload("src/main/resources/ch_02/uc_01/getQuote_res.xml"))
-                              .withStatusCode(HttpResponseStatus.OK)
-                              .withHeader("Content-Type", "text/xml"))
+                        .withBody(createPayload("src/main/resources/ch_02/uc_01/getQuote_res.xml"))
+                        .withStatusCode(HttpResponseStatus.OK)
+                        .withHeader("Content-Type", "text/xml"))
                 .operation().start();
 
 

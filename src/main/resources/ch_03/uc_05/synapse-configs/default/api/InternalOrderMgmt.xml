@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016, Kasun Indrasiri. (http://kasunpanorama.blogspot.com/) All Rights Reserved.
+  ~
+  -->
+
+<api xmlns="http://ws.apache.org/ns/synapse" name="InternalOrderMgmt" context="/internal/orders">
+    <resource faultSequence="internalOrderFault" methods="POST">
+        <inSequence>
+            <log level="custom">
+                <property name="Messsage_Flow" value="== Pox Req : Rec ==="/>
+            </log>
+
+            <call>
+                <endpoint key="LegacyOrderProcEP"/>
+            </call>
+            <log level="full">
+                <property name="Messsage_Flow" value="=== Response Rec ===="/>
+            </log>
+            <property name="messageType" value="application/xml" scope="axis2"/>
+
+            <respond/>
+        </inSequence>
+    </resource>
+</api>
