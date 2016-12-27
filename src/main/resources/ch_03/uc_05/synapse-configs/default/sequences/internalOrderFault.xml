@@ -4,9 +4,10 @@
   ~
   -->
 
-<sequence name="InternalOrderMgmt" xmlns="http://ws.apache.org/ns/synapse">
+<sequence name="internalOrderFault" xmlns="http://ws.apache.org/ns/synapse">
     <log level="custom">
         <property name="Messsage_Flow" value="== Internal Orders - Fault Seq ==="/>
     </log>
+    <property name="HTTP_SC" scope="axis2" type="STRING" value="500"/>
     <respond/>
 </sequence>

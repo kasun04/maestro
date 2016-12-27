@@ -37,6 +37,10 @@ Starting Backend Services
      INFO [io.netty.handler.logging.LoggingHandler] [id: 0x735f8565, /127.0.0.1:9191] ACTIVE
 
 
+curl -v -X POST -H 'Content-Type: application/xml' -d @InternalOrderReq.xml http://localhost:6061/services/LegacyOrderProcessorService
+
+
+
 Deploying sample configuration
 ==============================
 
@@ -49,7 +53,9 @@ Running the client
 
 Execute following inside /maestro/src/main/resources/ch_03/uc_05
 
-curl -v -X POST -H 'Content-Type: application/xml' -d @InternalOrderReq.xml http://localhost:8280/InternalOrderMgmt/internal/orders
+
+
+curl -v -X POST -H 'Content-Type: application/xml' -d @InternalOrderReq.xml http://localhost:8280/internal/orders
 
 Verification
 ============
@@ -61,7 +67,9 @@ Successful execution of the sample should give you the following response at the
 < Date: Sun, 06 Nov 2016 19:02:12 GMT
 < Transfer-Encoding: chunked
 <
-<?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ordproc="http://orders.samples">
+
+<?xml version='1.0' encoding='UTF-8'?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ordproc="http://orders.samples">
     <soapenv:Body>
         <ordproc:procOrderReponse>
             <processedOrders>
@@ -80,6 +88,12 @@ Successful execution of the sample should give you the following response at the
             </processedOrders>
         </ordproc:procOrderReponse>
     </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+- You may change the timout value of the endpoint and observe difference endpoint behaviors.
+- Also, sutting down the backend and sending request can be also use to test the endpoint suspedned scenario given in the use case.
 
 
 

@@ -133,8 +133,7 @@ public class ServiceEmulator {
         Emulator.getHttpEmulator()
                 .server()
                 .given(configure().host("127.0.0.1").port(6061).context("/services")
-                        .withLogicDelay(60 * 1000)
-                        .randomConnectionClose(true))
+                        .withLogicDelay(25 * 1000))
                 /* Slow OrderProcessing Service : LegacyOrderProcessorService */
                 .when(request()
                         .withPath("LegacyOrderProcessorService")
