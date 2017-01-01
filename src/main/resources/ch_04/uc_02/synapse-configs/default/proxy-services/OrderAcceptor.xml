@@ -8,9 +8,10 @@
     <target>
         <inSequence>
             <log level="custom">
-                <property name="FLW" value="=== Req Received ==="/>
+                <property name="FLW" value="=== One way Proxy : Req Received ==="/>
             </log>
-            <property action="set" name="OUT_ONLY" value="true"/>
+            <property name="FORCE_SC_ACCEPTED" value="true" scope="axis2"/>
+            <property name="OUT_ONLY" value="true"/>
             <call>
                 <endpoint>
                     <address uri="jms:/StockQuotesQueue?transport.jms.ConnectionFactoryJNDIName=QueueConnectionFactory&amp;java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory&amp;java.naming.provider.url=repository/conf/jndi.properties&amp;transport.jms.DestinationType=queue" />
@@ -18,7 +19,5 @@
             </call>
         </inSequence>
     </target>
-
-    <!-- [1] -->
     <description/>
 </proxy>

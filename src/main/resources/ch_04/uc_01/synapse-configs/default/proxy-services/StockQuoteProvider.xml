@@ -7,17 +7,11 @@
        startOnLoad="true">
     <target>
         <inSequence>
-            <log level="custom">
-                <property name="FLW" value="=== Req Received ==="/>
-            </log>
-            <header name="Action" value="urn:getQuote"/>
-
             <call>
                 <endpoint>
                     <address uri="http://localhost:6060/services/StockQuoteService" />
                 </endpoint>
             </call>
-            <log level="full"/>
             <respond/>
         </inSequence>
     </target>

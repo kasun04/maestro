@@ -1,0 +1,41 @@
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="SelectiveQuote"
+     context="/SelectiveQuote">
+    <resource methods="POST">
+        <inSequence>
+            <switch source="json-eval($.getFinancialQuote.company)">
+                <case regex="WSO2">
+                    <sequence key="StockQuoteReqSeq"/>
+                    <log level="custom">
+                        <property name="MessageFlowInfo"
+                                  value="== WSO2 Company =="/>
+                    </log>
+                    <respond/>
+                </case>
+                <case regex="XYZ">
+                    <sequence key="StockQuoteReqSeq"/>
+                    <log level="custom">
+                        <property name="MessageFlowInfo"
+                                  value="== XYZ Company =="/>
+                    </log>
+                    <respond/>
+                </case>
+                <default>
+                    <log level="custom">
+                        <property name="MessageFlowInfo"
+                                  value="Filter condition NOT satisfied."/>
+                    </log>
+
+                    <payloadFactory media-type="json">
+                        <format>
+                            {"response": { "status" : "Unsupported company name." }}
+                        </format>
+                        <args></args>
+                    </payloadFactory>
+                    <property name="HTTP_SC" scope="axis2" type="STRING" value="500"/>
+                    <drop/>
+                </default>
+            </switch>
+        </inSequence>
+    </resource>
+</api>
