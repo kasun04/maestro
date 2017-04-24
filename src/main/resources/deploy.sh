@@ -1,7 +1,8 @@
 #!/bin/bash
 
  if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-     echo "Usage : ./deploy.sh ch_01 uc_011 <ESB_HOME>"
+     echo "Usage   : ./deploy.sh <chapter_name> <usacase_name> <root directory of your WSO2 ESB installation>"
+     echo "Example : ./deploy.sh ch_02 uc_01 /Users/kasun/development/deployment/maestro/wso2esb-5.0.0"
      exit 0
  fi
 

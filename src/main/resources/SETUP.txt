@@ -25,3 +25,17 @@ Installing and starting WSO2 ESB 5.0
 
 - You have just installed and started WSO2 ESB successfully!
 
+
+
+Using Enterprise Integrator 6.x
+===============================
+
+Enterprise Integrator is the new version of the ESB which combines the capabilities of ESB, Data Services server, Business Process Server and Message Broker.
+
+*** ALL the samples in this book are fully compatible with the current and future versions of Enterprise Integrator.  ***
+
+There are slight changes related to the script that you use to run the Enterprise Integrator. Please refer https://docs.wso2.com/display/EI610/Quick+Start+Guide
+for more details. There's nothing you need to do for the ESB configuration artifacts when you run them inside the EI 6.x.
+
+
+*** If you are already running WSO2 ESB 5.0, there is no need of migrating to EI 6.0, unless you are using any of the advantages of repackaging structure of EI.

@@ -25,6 +25,8 @@ Starting Backend Services
 - Find maestro/maestro-1.0.0.jar and run  'java -jar maestro-1.0.0.jar' to start the backend services.
 - Observe the following logs in a successfully started services.
 
+** It's not really necessary to understand the following log messages.
+
     kasun@macbookpro:~/development/source/git/kasun04/maestro$ java -jar maestro-1.0.0.jar
      INFO [io.netty.handler.logging.LoggingHandler] [id: 0x735f8565] REGISTERED
      INFO [io.netty.handler.logging.LoggingHandler] [id: 0xe5ec0c96] REGISTERED
@@ -37,12 +39,14 @@ Starting Backend Services
      INFO [io.netty.handler.logging.LoggingHandler] [id: 0x735f8565, /127.0.0.1:9191] ACTIVE
 
 
-Deploying sample configuration
+Deploying sample configuration ***
 ==============================
 
 - Go to maestro/src/main/resources deploy sample configuration for use cases of the chapter 2. :
     >> sh deploy.sh ch_02 uc_01 <ESB_HOME>
 - Observe ESB logs/console output for the status of new artifacts that you have deployed.
+
+*** deploy.bat is not available for windows yet. Please install and use Cygwin (https://www.cygwin.com/) to run the .sh files.
 
 Running the client
 ==================
